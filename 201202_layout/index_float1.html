@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float1</title>
+	<style>
+		*{margin: 0;quotes: 0;}
+		a:link, a:visited{
+			color: #000;
+			text-decoration: none;
+		}
+
+		li{list-style: none;}
+		
+/*		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}*/
+
+		div.box{
+			width: 500px;
+			background-color: skyblue;
+			margin: 0 auto;
+		}
+
+		div.box>div.box1{
+			width: 100px;
+			height: 50px;
+			float: left;
+			background-color: orange;
+			line-height: 50px;
+		}
+
+		div.box>div.box2{
+			width: 100px;
+			height: 50px;
+			float: right;
+			background-color: green;
+			line-height: 50px;
+		}
+
+		/*div.box>div.clear{clear:both;}*/
+		div.box:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box cleardix">
+		<div class="box1">left</div>
+		<div class="box2">right</div>
+		<div class="clear"></div>
+	</div>
+	Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Inventore voluptas, ea, accusantium quam non necessitatibus aperiam soluta iusto nisi rem error enim minima eveniet consequatur voluptatibus quas, doloremque. In, qui.
+</body>
+</html>

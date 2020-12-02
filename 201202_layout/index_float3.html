@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link, a:visited{
+			color: #000;
+			text-decoration-style: none;
+		}
+	header{margin-bottom: 20px;}
+		li{list-style: none;}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		div.nav{
+			width: 500px;
+			background-color: pink;
+			margin: 0 auto;
+		}
+		div.nav>ul{}
+		div.nav>ul>li{
+			float: left;
+			width: 100px;height: 40px;
+			text-align: center;
+			line-height: 40px;
+			cursor: pointer;
+		}
+
+		div.nav>ul>li:hover{
+			background-color: #CCC;
+		}
+
+
+		h1{
+			padding: 20px;
+			text-align: center;
+		}
+
+	div.visual{
+			width: 1200px;height: 500px;
+			background-color: gray;
+			margin: 0 auto;	
+		}
+		div.visual{	margin-bottom: 20px;}
+
+
+
+
+	.clarfix{width: 500px;
+			margin: 0 auto;
+			}
+
+	div.box{}
+	div.box_left{
+		float: left;
+		width: 190px;height: 230px;
+		background-color: #CCC;
+	}
+	div.box_right{
+		float: right;
+		width: 300px;height: 230px;
+		background-color: #CCC;
+	}
+
+
+
+/*footer{
+	width: 1200px;height: 150px;
+	background-color: #ccc;
+	margin: 0 auto;
+}*/
+	</style>
+}
+
+
+</head>
+<body>
+<header>
+	<h1>Logo</h1>
+	<div class="nav">
+		<ul class="clearfix">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+	</div>
+</header>
+
+
+<div class="visual"></div>
+
+<div class="clarfix">
+	<div class="box">
+		<div class="box_left"></div>
+		<div class="box_right"></div>
+	</div>
+
+</div>
+
+<footer></footer>
+
+</body>
+</html>

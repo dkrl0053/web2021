@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		div.d{
+			float:left;
+			background-color: skyblue;
+			width: 300px;
+			margin-left: 10px;
+			padding: 20px;
+			text-align: justify;
+		}
+
+		div.box{
+			background-color: skyblue;
+			width: 500px; _height: 100px;
+			margin: 0 auto;}
+
+
+	    div.box>div.box1{
+			float: left; width: 200px;
+			background-color: orange;
+		}
+		div.box>div.box2{
+			float: right;width: 200px;
+			background-color: green;
+		
+		}
+		div.box>div.box3{clear:both;}
+
+		.clearfix:after{content: "";display: block; clear: both;}
+
+	</style>
+</head>
+<body>
+	<div class="d">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo maiores autem excepturi quae nihil rerum quidem adipisci, magni quia, ex aspernatur quasi, consectetur, voluptatum assumenda fugit? Soluta ipsum, culpa? Similique!</div>
+
+	Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Error eveniet reprehenderit debitis repellendus quibusdam, maiores eligendi, ipsa consectetur iusto mollitia recusandae omnis provident dolor sapiente. Mollitia magnam est ipsam ea.
+	<img src="../images/testimg.jpg" alt="">
+
+	<hr>
+
+	<div class="box clearfix">
+		<div class="box1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa at eaque, iusto cum commodi cumque nostrum voluptatem, accusantium odio. Velit autem ducimus nihil ab vitae facilis dolore voluptatum minus perspiciatis.</div>
+
+		<div class="box2">Vero animi illo, ad facere? Dignissimos ullam accusamus nulla nihil sapiente dolorum eligendi minus facere ducimus eius aliquid, nam quaerat nisi iste alias accusantium? Natus adipisci vitae minima deleniti error.</div>
+
+		<!-- <div class="box3"></div> -->
+		<!-- display:block:clear:both -->
+
+
+	</div>
+
+	<style>
+		div.box10:before{content:"안녕하세요";}
+		div.box10:after{
+			content:"만나서 반갑습니다";
+			display: block; 
+			clear: both;}
+	</style>
+	
+	<div class="box10">10Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam labore amet obcaecati accusantium. Qui sint nobis ipsam totam aperiam eos! Atque sed accusamus nobis quas velit cupiditate tempore pariatur fugiat.</div>
+
+
+</body>
+</html>

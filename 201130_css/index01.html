@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS</title>
+	<style>
+		/*h3{color: brown;}*/
+		/*li{color: brown;}*/
+
+		h3,
+		li{color:brown;}
+		body.main{}
+		.warning{}
+
+		/*body>div>ul>li{} */  = /*body li{}*/
+		a[href="http://www.daum.net"]{color: brown;}
+		.link{color: red;}
+/*
+		p>a{text-decoration: none;}
+		p>a:link{color: black;}
+		p>a:visited{color: gray;}
+		p>a:active{color: red;}
+		p>a:hover{font-weight: bold}
+		p>a:focus{color: yellow;}
+*/
+		a:link,a:visited{
+			color: black;
+			text-decoration: none;}
+		ul.nav>li{background-color: skyblue;}
+		
+		ul.nav>li:first-child{background-color: blue;}
+		ul.nav>li:last-child{background-color: orange;}
+		ul.nav>li:nth-child(2){background-color: white;}
+
+
+	</style>
+
+</head>
+
+
+<body class="main">
+	<h3>web Programming</h3>
+	<hr>
+	<div>
+		<div>2학기 학습내용</div>
+			<ul class="nav">
+				<li>HTML5</li>
+				<li>CSS</li>
+				<li>JAVAscript</li>
+			</ul>
+			<div class="warning">60점 이하는 F</div>
+		</div>
+	</div>
+	<p>
+		<!-- a[속성="속성값"] -->
+		<a href="http://www.naver.com" class="link">NAVER</a>
+		<a href="http://www.daum.net">DAUM</a>
+		
+
+		<a href="http://www.gabia.com">Gabia</a>
+	</p>
+
+</body>
+</html>
