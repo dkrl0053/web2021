@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		/*header*/
+		#mh{
+			width: 1200px; height: 180px;
+			background-color: #e8e8e8;
+			position: relative;
+			margin: 0 auto;
+		}
+		#mh h1{
+			width: 90px; height: 90px;
+			background-color: #ffe383;
+			position: absolute;
+			left: 550px; top: 10px;
+			
+
+		}
+		#mg h1 a{
+			display: block;
+			line-height: 90px;
+
+		}
+
+		/*util menu*/
+		.util_menu{
+			width: 300px; height: 30px;
+			background-color: #ffc600;
+			position: absolute;
+			right: 10px; top: 10px;
+
+		}
+		.util_menu li{
+			float: left;
+			width: 100px;
+		}
+		.util_menu a{
+			display: block;
+			text-align: center;
+			line-height: 30px;
+
+		}
+
+		/*nav.gnb*/
+		.gnb{
+			width: 1200px; height: 40px;
+			background-color: #9d9d9d;
+			/*margin: 0auto;*/ 
+			position: absolute;
+			/*left:0px;*/ bottom: 0px;
+			/*transform: translate(-50% 0%);*/
+
+			
+		}
+
+		.gnb li{
+			float: left;
+			width: 240px;
+		}
+		.gnb li a{
+			color: #fff;
+			display: block;
+			text-align: center;
+			line-height: 40px;
+		}
+		.gnb li a:hover{
+			background-color: #e8e8e8;
+			color: #9d9d9d;
+		}
+
+
+	</style>
+</head>
+<body>
+	<header id="mh">
+		<h1><a href="#">LOGO</a></h1>
+		<div class="util_menu">
+			<ul>
+				<li><a href="#">util1</a></li>
+				<li><a href="#">util2</a></li>
+				<li><a href="#">util3</a></li>
+			</ul>
+		</div>
+
+		<nav class="gnb">
+			<ul>
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	
+</body>
+</html>

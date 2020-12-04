@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>positiom</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link, a:visited{color: #fff;
+			text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:agter{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		body{background-image: url(../images/bg_grid.gif);
+			/*background-repeat: no-repeat;*/
+		}
+
+		div{
+			width: 200px;height: 200px;
+			display: inline-block;
+		}
+
+
+		div.box1{
+			background-color: green;
+			position: absolute;
+			left: 0px; top: 0px;
+			/*z-index: 2;*/
+		}
+
+		div.box2{
+			background-color: red;
+			position: absolute;
+			right: 0px; top: 0px;
+			/*z-index: 1;*/
+
+		}
+		div.box3{
+			background-color: blue;
+			position: absolute;
+			right: 0px; bottom: 0px;
+			/*z-index: 1;*/
+		}
+
+
+		div.box4{
+			background-color: yellow;
+			position: absolute;
+			left: 0px; bottom: 0px;
+			/*z-index: 1;*/
+		}
+
+		/*relative: 좌표값 받아 움직여도 값이 남아있음*/
+		/*absolute: 가장많이 활용됨, 사용하게 되면 레이어개념이 생기게 됨*/
+	
+	</style>
+</head>
+<body>
+	
+	<div>
+		<div class="box1">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eum!</div>
+		<div class="box2">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, quam?</div>
+		<div class="box3">3 Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Deleniti, porro.</div>
+		<div class="box4">4 Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, natus.</div>
+	</div>
+<!-- 
+
+	<div class="static">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, sed.</div>
+	<div class="relative">relative</div>
+	<div class="fixed">fixed</div>
+	<div class="absolute">absoluete</div>
+	<div class="sticky">sticky</div> -->
+
+</body>
+</html>

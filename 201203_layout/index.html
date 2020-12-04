@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+		a:link, a:visited{
+			color: #000;
+			text-decoration-style: none;
+		}
+		li{
+			list-style: none;
+		}
+		h1{
+			text-align: center;
+			padding: 20px;
+		}
+
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		div.nav{
+			width: 500px;
+			background-color: skyblue;
+			margin: 0 auto;
+		}
+
+		div.nav>ul{}
+		div.nav>ul>li{
+			float: left;
+			width: 100px;height: 35px;
+			text-align: center;
+			line-height: 35px;
+		}
+		div.nav>ul>li:hover{
+			background-color: #CCC;
+		}
+		header{
+			margin-bottom: 20px;
+		}
+		.visual{
+			width: 1200px;height: 150px;
+			background-color: #ccc;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Logo</h1>
+		<div class="nav">
+			<ul class="clearfix">
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				<li>menu5</li>
+			</ul>
+		</div>
+	</header>
+
+	<main>
+		<div class="visual"></div>
+	</main>
+</body>
+</html>

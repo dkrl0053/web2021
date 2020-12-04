@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position4</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		/*header*/
+		#mh{
+			width: 1000px; height: 110px;
+			background-color: #999;
+			position: relative;
+			margin: 0 auto;
+		}
+		#mh h1{
+			width: 90px;height: 90px;
+			background-color: #fff;
+			position: absolute;
+			left: 10px; top: 10px;
+		}
+
+		#mh	h1 a{
+			display: block;
+			line-height: 90px;
+		}
+		.util_menu{
+			width: 300px;
+			background-color: pink;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+		.util_menu li{
+			float: left;
+			width: 100px;
+		}
+		.util_menu a{
+			display: block;
+			text-align: center;
+			line-height: 40px;
+		}
+
+
+
+
+
+		.gnb{
+			width: 700px;
+			background-color: green;
+			position: absolute;
+			bottom: 10px; right: 10px;
+		}
+		.gnb li{
+			width: 20%;
+			float: left;
+		}
+		.gnb a{
+			display: block;
+			text-align: center;
+			line-height: 40px;
+		}
+		.gnb a:hover{
+			background-color: #999;
+			color: #fff;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<header id="mh">
+		<h1><a href="#">LOGO</a></h1>
+		<div class="util_menu">
+			<ul class="clearfix">
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">CONTACT US</a></li>
+				<li><a href="#">SITE MAP</a></li>
+			</ul>
+		</div>
+		<nav class="gnb">
+			<ul class="clearfix">
+				<li><a href="#">MENU1</a></li>
+				<li><a href="#">MENU2</a></li>
+				<li><a href="#">MENU3</a></li>
+				<li><a href="#">MENU4</a></li>
+				<li><a href="#">MENU5</a></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>

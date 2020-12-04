@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link, a:visited{color: #fff;
+			text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		div.box{  
+			width: 500px;height: 500px;
+			background-color: skyblue;
+/*			position: relative;*/
+			/*relative로 작성하는거 먼저 연습
+			absolute를 제어하려면 부모자 relative가 있어야 작동*/
+			/*left: 50%; margin-left: -250px;
+			top: 50%;*/
+			position: absolute;
+			left: 50%;margin-left: 250px;
+			top: 50%; margin-top: 250px;
+			/*margin: 0 auto;*/
+		}
+		div.box>div{
+			width: 100px;height: 100px;
+			text-align: center;
+			line-height: 100px;
+			}
+
+		div.box>div.box1{
+			background-color: pink;
+			position: absolute;
+			right: 0; left: 50%;
+		}
+		div.box>div.box2{background-color: blue;}
+		div.box>div.box3{background-color: green;}
+		div.box>div.box4{background-color: yellow;}
+
+
+
+	</style>
+
+</head>
+<body>
+	<div class="box">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+	</div>
+</body>
+</html>

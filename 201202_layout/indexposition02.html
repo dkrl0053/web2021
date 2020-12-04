@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>	
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link, a:visited{color: #fff;
+			text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+
+		div{
+			width: 100px;height: 100px;
+			text-align:center;
+			line-height: 100px;
+		}
+
+		div.box1{
+			background-color: pink;
+			position: absolute;
+			top:0px; left: 50%; margin-left: 50px;
+		}
+		div.box2{
+			background-color: skyblue;
+			position: absolute;
+			right: 0px;  bottom: 50%; margin-top: 50px; 
+		}
+		div.box3{
+			background-color: green;
+			position: absolute;
+			bottom: 0px; left: 50%; margin-left: 50px;
+		}
+		div.box4{
+			background-color: yellow;
+			position: absolute;
+			left: 0px; bottom: 50%; 
+		}
+	
+
+	</style>
+
+
+</head>
+
+<body>
+	<div class="box1">top</div>
+	<div class="box2">right</div>
+	<div class="box3">bottom</div>
+	<div class="box4">left</div>
+
+</body>
+</html>

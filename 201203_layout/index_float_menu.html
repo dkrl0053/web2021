@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float menue</title>
+	<style>
+		/*reset*/
+		*{
+			margin: 0;padding: 0;
+			
+		}
+		a:link,a:visited{
+			color: #000;
+			text-decoration: none;
+		}
+		li{
+			list-style: none;
+		}
+
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+	/*header*/
+	header.header{
+		width: 1000px;
+		background-color: #fff;
+		margin: 0 auto; /*가운데정렬*/}
+		
+	h1{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+		/*nav*/
+		.nav{
+			width: 1000px; 
+			/*background-color: pink;*/
+			margin: 0 auto;
+		}
+
+		.nav>ul{}
+		.nav>ul>li{
+			float: left;
+			/*background-color: pink;*/
+			width: 20%; /*height: 40px;*/
+			text-align: center;
+			line-height: 40px;
+			} 
+			/*line-haight값이 밀어내서 height 값이 없어도 칸이 만들어짐*/
+
+		.nav>ul>li>a{
+			display: block;
+			height: 40px;
+			background-color: pink;}
+		.nav>ul>li>a:hover{
+			color: white;
+			background-color: #ccc
+		}
+
+		
+		/*hover 적용방법
+		.nav>ul>li:hover{
+			background-color: #ccc;}
+		
+		.nav>ul>li:hover a{color: white;}
+		
+		.nav>ul>li>a:hover{
+			color: white;
+			background-color: #ccc}
+			*/
+		
+
+/*	main{
+		background-color: #fff;
+		width: 1000px; height: 150px;
+		margin: 0 auto;
+	}*/
+
+	.visual{
+		height: 300px;
+		background-color: #888;
+		text-align: center;
+		padding-top: 120px;
+		box-sizing:border-box;
+	}
+
+	/*container*/
+	section.container{
+		width: 1000px;
+		background-color: #ccc;
+		margin: 0 auto;
+		padding: 10px;
+		box-sizing:border-box; /*안쪽으로 영역 축소*/
+	}	
+
+	.aside{
+		float: left;
+		width: 30%; height: 170px;
+		text-align: center;
+		background-color: #fff;
+		padding-top: 130px;
+	}
+	.aside:hover{
+		background-color: #F2F2F2;
+	}
+	.content{
+		float: right;
+		width: 60%;height: 170px;
+		text-align: center;
+		background-color: #fff;
+		padding-top: 130px;
+	}
+	.content:hover{
+		background-color: #F2F2F2;
+	}
+
+
+/*	main>div{
+		float: left;
+		width: 1000px; height: 200px;
+		background-color: #ccc;
+		margin-right: 5px;
+	}*/
+	/*footer*/
+	footer.footer{
+		width: 1000px; height: 100px;
+		background-color: pink;
+		margin: 0 auto;
+	}
+
+	/*etc*/
+	.mb10{margin-bottom: 10px; !important;}
+	
+	</style>
+</head>
+
+<body>
+
+	<!-- header -->
+	<header class="header mb10">
+		<h1>logo</h1>
+		<nav class="nav mb10">
+			<ul class="clearfix">
+				<!-- before -->
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+				<!-- after -->
+			</ul>
+		</nav>
+	</header>
+
+	<!-- main -->
+	<main class="main mb10">
+		<div class="visual mb10">visual</div> 
+
+		<section class="container clearfix mb10">
+			<aside class="aside">aside</aside>
+			<!-- <div class="box_center"></div> -->
+			<div class="content">content</div>
+		</section>
+	</main>
+
+	<!-- footer -->
+	<footer class="footer">
+		footer
+	</footer>
+
+</body>
+</html>
