@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{
+			width: 300px; height: 300px;
+			background-image: url(../images/testimg.jpg);
+			background-repeat: repeat;
+			background-position: center;
+			}
+		.box h3{
+			_background: pink;
+			color: #fff;
+			line-height: 300px;
+			text-align: center;
+			
+		}
+		.txt{
+			text-shadow: 0px 0px 5px #000;
+		}
+            /* 따로 쓰는 경우
+            background-image: url(../images/testimg.jpg);
+			background-repeat: repeat;
+			background-position: center;*/
+
+			/* 한번에 쓰는 경우
+			background: url(../images/testimg.jpg) no-repeat center; */
+		
+		.box1{
+			width: 500px;
+			border:1px solid #000;
+			padding: 10px;
+		}
+
+		.box1 h3{
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		.box2{
+			width: 500px; height: 300px;
+			display: table-cell;
+			border: 1px solid #ccc;
+			vertical-align: middle;
+			
+		}
+		.box2 h3{
+			text-align: center;
+		}
+
+		.box3{
+			width: 500px; height: 500px;
+			background: skyblue;
+			box-sizing: border-box; /* 지정한  박스 사이즈 안에서 padding 조절*/
+			padding: 20px;
+		}
+
+		.box3 h3{
+			_display: none;
+			visibility: hidden;
+		}
+
+		.box3 p{
+			opacity: 30%;
+		}
+
+		.box4{
+			width: 500px; height: 100px;
+			border: 1px solid #000;
+			overflow-y:scroll;
+			padding: 20px;
+			box-sizing: border-box;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h3 class="txt">안녕하세요</h3>
+	</div>
+	<div class="box1">
+		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde maiores odio, voluptates dignissimos tempore mollitia soluta, fugiat aliquam ipsa ullam temporibus eum quibusdam eligendi provident. Quae optio repellendus quas!</h3>
+	</div>
+
+	<div class="box2">
+		<h3>text</h3>
+	</div>
+
+	<div class="box3">
+		<h3>
+			안녕하세요</h3>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam dolor temporibus voluptates tempore reiciendis dicta tempora molestiae, velit, autem. Sint ea aspernatur pariatur praesentium iure mollitia exercitationem illum odio ducimus.</p>
+		
+	</div>
+
+	<div class="box4">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Soluta, quod in deleniti dolorum recusandae, natus. Accusamus labore minima in ullam magnam quos, vel cumque natus sequi quia harum possimus est fugiat corporis modi laudantium dolor, qui error necessitatibus, rerum! Blanditiis saepe qui non eaque. Delectus non labore alias doloremque, aliquid animi expedita dolore dolorum saepe, excepturi ipsam asperiores iure. Ab ipsam sed accusantium quia illum, qui perspiciatis ex repellendus, soluta corporis optio inventore nemo, porro? Optio, illo eaque. Repudiandae voluptate aperiam autem nemo pariatur expedita tenetur iure aliquid ab. Est velit deleniti eos dolorum, maxime dolores maiores sit. Impedit, natus.</p>
+	</div>
+
+</body>
+</html>
