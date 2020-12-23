@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>transform</title>
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.boxWrap{
+			width: 500px;height: 500px;
+            background:skyblue;
+			margin:0 auto;
+			overflow:hidden;
+		}
+
+		.box{
+			width: 200px;height: 200px;
+			background: #f00;
+			transform:translate(0px,0px) rotate(0deg) scale(1);
+            transition:0.3s;
+			/*transform-origin:100% 100%;*/
+		}
+
+		.boxWrap:hover .box{
+			transform:rotate(20deg) scale(2);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="boxWrap">
+		<div class="box"></div>
+	</div>
+	<style>
+		.contents{
+            width: 1000px;
+            margin: 0 auto;
+            background:pink;
+            }
+		.contents>ul{}
+		.contents>ul>li{
+            float: left;
+            width: 242.5px;
+            margin-right:10px;
+            overflow: hidden;
+            }
+		.contents>ul>li:last-child{
+            margin-right:0;
+            }
+		.contents>ul>li>img{
+			width: 100%;display:block;transition:0.3s;
+			/*transform-origin:0 0;*/
+		}
+
+		.contents>ul>li:hover img{
+            transform:scale(1.1);
+            }
+
+	</style>
+
+	<div class="container">
+		<div class="contents">
+			<ul class="clearfix">
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+				<li><img src="../images/testimg.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxslider control</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            var mySlider = $("ul.slider").bxSlider({
+                auto:true,
+                // mode:"fade",
+                controls:false,
+                pager:false
+            });
+
+            $(".nextBtn").click(function(){
+                mySlider.goToNextSlide();
+            });
+            $(".prevBtn").click(function(){
+                mySlider.goToPrevSlide();
+
+            });
+         });
+    </script>
+    <style>
+    
+    .sliderWrap{
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+
+    }
+
+     .slider img{width: 100%; display: block;}
+     .bx-wrapper{
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 0 none;
+        background: #fff;
+        margin-bottom: 0;
+
+     }
+     .bx-wrapper .bx-pager{
+         bottom: 30px;
+     }
+    
+    .contents{
+        width: 1000px; height: 400px;
+        margin: 0 auto;
+        background: pink; }
+
+    
+    .nextBtn, .prevBtn{
+        position: absolute; top: 50%; margin-top: -50px;
+    }
+    .nextBtn{right: 10px;}
+    .prevBtn{top: 50%; left: 10px;}
+
+    </style>
+<body>
+    <div class="sliderWrap">
+        <ul class="slider">
+            <li><img src="images/img01.jpg" alt=""></li>
+            <li><img src="images/img02.jpg" alt=""></li>
+        </ul>
+        <div class="nextBtn"><img src="images/next01.png" alt=""></div>
+        <div class="prevBtn"><img src="images/prev01.png" alt=""></div>
+    </div>
+    <div class="contents">
+
+    </div>
+
+</body>
+</html>

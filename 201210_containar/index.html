@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .containal{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .containal p{
+            margin-bottom: 10px;
+        }
+
+        .containal h2, .containal p{
+            text-align: center;
+        }
+
+        .contents li{
+            float: left;
+            width: 288.75px; height: 288.75px;
+            margin-right: 15px;
+            position: relative;
+        }
+        .contents li:last-child{
+            margin-right: 0px;
+        }
+        .contents img{
+                width: 100%;
+            }
+
+        .contents .overlay{
+            position: absolute; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            text-align: center;
+            line-height: 288px;
+            /* display: none; */
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .contents li:hover .overlay{ 
+            /* display: block; */
+            opacity: 1;
+
+        }
+
+        .containal h2:after{
+            content: "";
+            display: block;
+            width: 200px; height: 1px;
+            background: #000;
+            margin: 10px auto;
+        }
+        
+        .dot::after{
+            content: "";
+            display: block;
+            width: 10px; height: 10px;
+            background: #000;
+            border-radius:5px 5px 5px 5px;
+            margin: 0 auto;
+
+        }
+
+        .dot::before{
+            content: "";
+            display: block;
+            width: 10px; height: 10px;
+            background: #000;
+            border-radius:5px 5px 5px 5px;
+            margin: 0 auto;
+
+        }
+        .pa20{padding: 20px;}
+        .mb20{margin-bottom: 20px; !important;}
+        .c_gray{background: #ccc;}
+
+        .ptb20{padding: 20px 0;}
+        .ptb40{padding: 40px 0;}
+
+    </style>
+</head>
+<body>
+    <div class="containal pa20 c_gray dot">
+        <!--before-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, a.</p> 
+        <!--after-->
+    </div>
+    <div class="containal ptb20">
+        <h2>GALLERY</h2>
+        <p class="mb20">Lorem ipsum dolor sit amet.</p>
+        <div class="contents">
+            <ul class="clearfix">
+                <li><img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">image1</div>
+                </li>
+                <li><img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">image2</div>
+                </li>
+                <li><img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">image3</div>
+                </li>
+                <li><img src="../images/testimg.jpg" alt="">
+                    <div class="overlay">image4</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="c_gray ptb40">
+        <div class="containal ptb20">
+            <h2>GALLERY</h2>
+            <p class="mb20">Lorem ipsum dolor sit amet.</p>
+            <div class="contents">
+                <ul class="clearfix">
+                    <li><img src="../images/testimg.jpg" alt="">
+                        <div class="overlay">image1</div>
+                    </li>
+                    <li><img src="../images/testimg.jpg" alt="">
+                        <div class="overlay">image2</div>
+                    </li>
+                    <li><img src="../images/testimg.jpg" alt="">
+                        <div class="overlay">image3</div>
+                    </li>
+                    <li><img src="../images/testimg.jpg" alt="">
+                        <div class="overlay">image4</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

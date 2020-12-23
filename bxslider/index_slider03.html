@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>slider tab</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				controls:false,
+				//pager:false,
+				//auto:true,
+				pagerCustom:".sliderTab"
+			});
+		});
+	</script>
+	<style>
+		.bx-wrapper {
+		    -moz-box-shadow: none;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		    border: 0 none;
+		    margin-bottom:0;
+		}
+		.sliderWrap{width: 1260px;height: 740px;margin:0 auto;}
+		.slider .txtWrap{
+			position: absolute;top:150px;right: 100px;
+			_background:skyblue;width:400px;
+		}
+		.slider .txtWrap h2{font-size:30px;}
+		.slider .txtWrap h2:after{
+			content:"";display: block;
+			width: 200px;height: 2px;background:#000;margin:10px 0;
+		}
+		.slider .txtWrap p{margin-bottom:20px;}
+		.slider .txtWrap a{
+			display: block;width: 200px;height: 40px;
+			line-height:40px;text-align: center;
+			border: 1px solid #000;border-radius:20px;
+			font-weight:bold;
+		}
+		.slider .txtWrap a:hover{
+			background:#000;color:#fff;
+		}
+
+		.sliderWrap{position: relative;}
+
+		.sliderWrap .sliderTab{
+			position: absolute;left: 0;bottom: 0;
+			width: 100%;
+		}
+		.sliderWrap .sliderTab a{
+			float: left;
+			display: block;width: 25%;line-height:40px;
+			background:#f00;text-align: center;
+			color:#fff;font-size:1.5em;
+		}
+		.sliderWrap .sliderTab a:hover{background:orange;}
+		.sliderWrap .sliderTab a.active{background:#0f0;}
+	</style>
+</head>
+<body>
+	<div class="sliderWrap">
+		<ul class="slider">
+			<li>
+				<img src="images/main_slider01.jpg" alt="">
+				<div class="txtWrap">
+					<h2>Lorem ipsum dolor sit.1</h2>
+					<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Repellendus, id?</p>
+					<a href="#" class="btn">바로가기</a>
+				</div>
+			</li>
+			<li>
+				<img src="images/main_slider01.jpg" alt="">
+				<div class="txtWrap">
+					<h2>Lorem ipsum dolor sit.2</h2>
+					<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Repellendus, id?</p>
+					<a href="#" class="btn">바로가기</a>
+				</div>
+			</li>
+			<li>
+				<img src="images/main_slider01.jpg" alt="">
+				<div class="txtWrap">
+					<h2>Lorem ipsum dolor sit.3</h2>
+					<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Repellendus, id?</p>
+					<a href="#" class="btn">바로가기</a>
+				</div>
+			</li>
+			<li>
+				<img src="images/main_slider01.jpg" alt="">
+				<div class="txtWrap">
+					<h2>Lorem ipsum dolor sit.4</h2>
+					<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Repellendus, id?</p>
+					<a href="#" class="btn">바로가기</a>
+				</div>
+			</li>
+		</ul>
+		<div class="sliderTab">
+			<a href="#" data-slide-index="0">MENU1</a>
+			<a href="#" data-slide-index="1">MENU2</a>
+			<a href="#" data-slide-index="2">MENU3</a>
+			<a href="#" data-slide-index="3">MENU4</a>
+		</div>
+	</div>
+</body>
+</html>

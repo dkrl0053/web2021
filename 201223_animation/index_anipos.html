@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anipos</title>
+    <style>
+        html,body{height: 100%;}
+        body{
+            background-image: url(./images/bg02.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        .wrap{
+            position: absolute;
+            /* background: #eee; */
+            left: 50%;
+            /* transform: translateX(-50%) translateY(50%); */
+            transform: translate(-50%, -50%);
+            top: 50%;
+            z-index: 2;
+        }
+
+        .img01{
+            position: absolute;
+            top: -200px;
+            right: -100px;
+            animation-name: bal01;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes bal01{
+            0%{top: -200px;}
+            50%{top: -250px;}
+            100%{top: -200px;}
+        }
+
+        .wrap form{
+            position: relative;
+        }
+
+        .searchTitle{
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px; height: 20px;
+            background-image: url(images/searchtext.jpg);
+            text-indent: -9999px;
+            left: 20px;
+            z-index: 2;
+        }
+        .searchInp{
+            position: relative;
+            width: 400px;
+            height: 50px;
+            text-indent: 90px;
+            font-size: 18px;
+            border: 3px solid #000;
+            border-radius: 25px; 
+        }
+        .searchBtn{
+            position: absolute;
+            width: 40px; height: 40px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 2 solid #aaa;
+            border-radius: 20px;
+            background: #fff;
+            background-image: url(images/search.jpg);
+            text-indent: -9999px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .img00{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            animation-name:air;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+        }
+        @keyframes air{
+            from{left:0; bottom:0;}
+            to{left:1800px; bottom:1500px;}
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="images/content2.png" alt="" class="img01">
+        <form action="#" method="post">
+            <label for="search" class="searchTitle">search</label>
+            <input type="text" id="search"
+            placeholder="검색어를 입력하세요" class="searchInp">
+            <input type="submit" value="button" class="searchBtn">
+        </form>
+    </div>
+    <img src="images/reallyAir.png" alt="" class="img00">
+</body>
+</html>

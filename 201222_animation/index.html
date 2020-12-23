@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            animation-name: ani; /*애니메이션 이름*/
+            animation-duration: 1s; /*시간*/
+            animation-fill-mode: forwards; /*종료시점*/
+            /* animation-iteration-count: 3; */
+            animation-iteration-count: infinite;/*반복*/
+            animation-direction: alternate;/*방향*/
+            animation-delay: 1s;/*지연시간*/
+            animation-timing-function: ease;/*애니메이션 모양*/
+        }
+        @keyframes ani{
+            from{width: 100px;}
+            to{width: 200px;}
+
+            /* 0{width: 100px;}
+            50%{width: 200px;}
+            100%{width: 100px;} */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
