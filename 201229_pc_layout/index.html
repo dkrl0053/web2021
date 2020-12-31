@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+        div{
+            background: #eee;
+            border: 1px solid #000;
+            margin-bottom:5px;
+        }
+
+        /*선택자 다음의 box1을 하나만 선택*/
+        div.box + div.box1{
+            background: #f00;
+        }
+
+        /*선택자 다음의 전체를 선택*/
+        div.box ~ div.box1{
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Lorem.</div>
+    <div class="box1">Lorem.</div>
+    <div class="box1">lorem1</div>
+    <div class="box">lorem1</div>
+    <div class="box">lorem1</div>
+    <div class="box">lorem1</div>
+    <div class="box">lorem1</div>
+    <div class="box">lorem1</div>
+    <div class="box">lorem1</div>
+    <div class="box">lorem1</div>
+    
+</body>
+</html>

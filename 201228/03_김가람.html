@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container{
+            padding: 40px 0;
+            min-width: 1200px;
+        }
+
+        /*gallery1*/
+        .contents{
+            width: 1200px;
+            margin: 0 auto;
+            
+        }
+        .contents.gall li{
+            float: left;
+            width: 288.75px;
+            height: 288.75px;
+            margin-right: 15px;
+            position: relative;
+            overflow:hidden;
+            cursor:pointer; 
+        }
+        .contents.gall li:last-child{
+            margin-right: 0;
+        }
+        .contents.gall img{
+            width: 100%;
+            display: block;
+        }
+        .contents.gall .overlay{
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0,0,0,0.3);
+            position: absolute;
+            top:0;
+            left:0;
+            opacity:0;
+            transition:0.3s;
+        }
+        .contents.gall .txt{
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+			background:#000;
+			position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            opacity:0;
+            transition:0.3s;
+            color:#fff;
+            border-radius:10px;
+        }
+        .contents.gall li:hover .overlay{
+            opacity:1;
+        }
+		.contents.gall li:hover .txt{
+            opacity:1;
+        }
+
+
+
+    /*common css*/
+    .tac{text-align: center !important;}
+
+    /*padding top*/
+    .pt20{padding-top: 20px !important;}
+
+    /*padding bottom*/
+    .pb20{padding-bottom:20px !important;}
+
+    /*margin bottom*/
+    .mb5{margin-bottom: 5px !important;}
+    .mb10{margin-bottom: 10px !important;}
+    .mb15{margin-bottom: 15px !important;}
+    .mb20{margin-bottom: 20px !important;}
+
+    .h2line:after{
+        content:"";
+        display: block;
+        width: 200px;
+        height: 1px;
+        background:#000;
+        margin: 10px auto;
+    }
+    .color1{background: #eee;}
+    .color2{
+        background-image: url(../images/pc01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+
+
+        }
+    .color3{
+        background-image: url(../images/pc02.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container pt20 pb20 mb20">
+        <h2 class="tac h2line">GALLERY</h2>
+        <p class="tac mb15">Lorem ipsum dolor sit amet.</p>
+        <ul class="contents gall clearfix">
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="txt tac">lorem</div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="txt tac">lorem</div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="txt tac">lorem</div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="txt tac">lorem</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="color2">
+        <div class="container pt20 pb20 mb20">
+            <h2 class="tac h2line">GALLERY</h2>
+            <p class="tac mb15">Lorem ipsum dolor sit amet.</p>
+            <ul class="contents gall clearfix">
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="txt tac">lorem</div>
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="txt tac">lorem</div>
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="txt tac">lorem</div>
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="txt tac">lorem</div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="color1">
+            <div class="container pt20 pb20 mb20">
+                <h2 class="tac h2line">GALLERY</h2>
+                <p class="tac mb15">Lorem ipsum dolor sit amet.</p>
+                <ul class="contents gall clearfix">
+                    <li>
+                        <img src="../images/testimg.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="txt tac">lorem</div>
+                    </li>
+                    <li>
+                        <img src="../images/testimg.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="txt tac">lorem</div>
+                    </li>
+                    <li>
+                        <img src="../images/testimg.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="txt tac">lorem</div>
+                    </li>
+                    <li>
+                        <img src="../images/testimg.jpg" alt="">
+                        <div class="overlay"></div>
+                        <div class="txt tac">lorem</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="color3">
+                <div class="container pt20 pb20 mb20">
+                    <h2 class="tac h2line">GALLERY</h2>
+                    <p class="tac mb15">Lorem ipsum dolor sit amet.</p>
+                    <ul class="contents gall clearfix">
+                        <li>
+                            <img src="../images/testimg.jpg" alt="">
+                            <div class="overlay"></div>
+                            <div class="txt tac">lorem</div>
+                        </li>
+                        <li>
+                            <img src="../images/testimg.jpg" alt="">
+                            <div class="overlay"></div>
+                            <div class="txt tac">lorem</div>
+                        </li>
+                        <li>
+                            <img src="../images/testimg.jpg" alt="">
+                            <div class="overlay"></div>
+                            <div class="txt tac">lorem</div>
+                        </li>
+                        <li>
+                            <img src="../images/testimg.jpg" alt="">
+                            <div class="overlay"></div>
+                            <div class="txt tac">lorem</div>
+                        </li>
+                    </ul>
+                </div>
+
+    </div>
+</body>
+</html>
