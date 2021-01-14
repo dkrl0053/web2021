@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>media</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+
+		.container{
+            width: 1000px;
+            margin: 0 auto
+        }
+		.container ul li{
+            float: left;
+            width: 242.5px;
+            margin-right:10px;
+        }
+		.container li:last-child{
+            margin-right: 0;
+        }
+		.container ul li img{
+            width: 100%;
+            display: block;
+        }
+
+		@media screen and (max-width:575px){
+			body{
+                background:orange;
+            }
+			.container{
+                width: 100%;
+            }
+			.container ul li{
+                width: 100%;
+            }
+			.mobile{
+                display: none;
+            }
+		}
+
+		/*@media screen and (max-width:991px){
+			body{background:skyblue;}
+		}*/
+
+		@media screen and (min-width:576px) and (max-width:921px){
+			body{
+                background:skyblue;
+            }
+			.container{
+                width: 100%;
+            }
+			.container ul li{
+                width: 50%;
+                margin-right:0;
+            }
+			.tablet{
+                display: block;
+            }
+		}
+
+
+		@media screen and (min-width:922px){
+			body{
+                background:blue;
+            }
+			.pc{
+                display: none;
+            }
+		}
+
+/*		@media print{
+			body{background:blue;}
+		}*/
+	
+	</style>
+
+</head>
+<body>
+ 	<div class="container">
+ 		<ul class="clearfix">
+ 			<li><img src="../images/testimg.jpg" alt=""></li>
+ 			<li><img src="../images/testimg.jpg" alt=""></li>
+ 			<li><img src="../images/testimg.jpg" alt=""></li>
+ 			<li><img src="../images/testimg.jpg" alt=""></li>
+
+ 		</ul>
+ 	</div>
+ 	
+ 	<div class="container mobile tablet pc">
+ 		<ul class="clearfix">
+ 			<li><img src="../images/testimg.jpg" alt=""></li>
+ 			<li><img src="../images/testimg.jpg" alt=""></li>
+ 			<li><img src="../images/testimg.jpg" alt=""></li>
+ 			<li><img src="../images/testimg.jpg" alt=""></li>
+ 			
+ 		</ul>
+ 	</div>
+</body>
+</html>

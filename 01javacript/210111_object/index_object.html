@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        var size = 10;
+        while(size>0){
+            document.write("*");
+            size--; //size = size -1;
+        }
+
+        document.write("<br>");
+
+        var sizeup = 0;
+        while(sizeup<10){
+            document.write("*");
+            sizeup++;
+        }
+
+        document.write("<br>");
+
+        for(var i=10;i>0;i--){
+            document.write("+");
+        }
+        document.write("<br>");
+        for(var z=0;z<10;z++){
+            document.write("-");
+        }
+
+        var plots = [20,5,8,20,15];
+        var plotsLength = plots.length; //5개
+        for(var i=0;i<plotsLength;i++){
+            console.log(i + "값은" + plots[i]);
+            var size = plots[i];
+            while(size>0){
+                document.write("*");
+                size--;
+            }
+            document.write("<br>")
+        }
+
+        var degrees = new Array();
+        degrees[0] = 15.1;
+        degrees[1] = 15.4;
+        degrees[2] = 16.1;
+        degrees[3] = 17.1;
+        degrees[4] = 18.1;
+        degrees[5] = 12.1;
+
+        var sum = 0;
+        for(var i=0;i<degrees.length;i++){
+            ducoment.write(degrees[i]);
+            sum = sum + degreens[i];
+        }
+        document.write("온도의 평균은" + (sum / degrees.length));
+        for(var i of degrees){
+            console.log(Math.round(i));
+        }
+        
+
+    </script>
+</body>
+</html>

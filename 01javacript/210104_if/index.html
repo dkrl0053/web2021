@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF</title>
+    <script>
+        var eng = 40;
+        var math = 88;
+
+        if( eng > 50 ){
+            // 실행문;
+            document.write("점수는 50보다 큰 " + eng + " 입니다.<br>");
+            // true
+        }
+        else{
+            document.write("점수는 50보다 작은 " + eng + " 입니다.<br>");
+            // false
+        }
+
+
+        var age = 18;
+        var gender= "M";
+        var result;
+
+
+        if( age >= 19 ){
+            // result = "성인"
+            if( gender == "M"){
+                result = "남자 성인";
+            } else{
+                result = "여자 성인";
+            }
+        
+        }else{
+            // result = "미성년자"
+            if(gender == "M"){
+                result = "남자 미성년자";
+            }else{
+                result ="여자 미성년자";
+            }
+        }
+        document.write("당신은 "+ result + " 입니다.");
+
+    </script>
+</head>
+<body>
+    <p>아이디/비밀번호 입력</p>
+    <script src="js/script.js"></script>
+</body>
+</html>

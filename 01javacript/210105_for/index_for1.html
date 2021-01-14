@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for</title>
+	<link rel="stylesheet" href="../css/reset.css">
+</head>
+<body>
+	<script>
+		var st = ["서울","부산","대구","광주","경기"];
+		console.log("배열개수:" + st.length);
+		// st[0] ->서울
+		for(var i=0;i<st.length;i++){
+			document.write(st[i]+"<br>");
+		}
+
+		var img = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg"];
+		var txt = ["앵무새","장미","거위","바이킹"];
+		console.log("이미지개수:"+ img.length);
+
+		document.write("<ul class=\"nav clearfix\">");
+		for(var i=0;i<img.length;i++){
+			document.write("<li>");
+			document.write("<img src=\"../images/" + img[i] + "\">");
+			document.write("<p>"+txt[i]+"</p>");
+			document.write("</li>");
+		}
+		document.write("</ul>");
+	</script>
+</body>
+</html>

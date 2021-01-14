@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>event</title>
+
+	<script>
+
+		function init(){
+			var p = document.getElementById("p");
+			p.onmouseover = over;
+			p.onmouseout = out;
+
+		}
+		
+		function over(){
+			p.style.backgroundColor = "red";
+		}
+		function out(){
+			p.style.backgroundColor = "white";
+		}
+
+
+
+	</script>
+</head>
+<body onload="init()">
+	<p onmouseover="this.style.backgroundColor='orchid'" 
+	onmouseout="this.style.backgroundColor='white'">마우스 오버</p>
+
+	<p id="p">
+		마우스오버
+	</p>
+
+	<div class="box">
+		마우스오버
+	</div>
+
+	<script>
+		var box = document.getElementsByClassName("box");
+		box[0].addEventListener("mouseover",bover);
+		box[0].addEventListener("mouseout",bout);
+
+		function bover(){
+			box[0].style.backgroundColor = "blue";
+		}
+		function bout(){
+			box[0].style.backgroundColor = "white";
+		}
+	</script>
+
+
+	<div class="box1">
+		프로퍼티로 이벤트 무명함수등록
+	</div>
+	<script>
+		var box1 = document.getElementsByClassName("box1");
+
+		box1[0].onmouseover = function(){
+			box1[0].style.fontSize = "2em";
+		}
+		box1[0].onmouseout = function(){
+			box1[0].style.fontSize = "1em";
+		}
+	</script>
+
+	<div class="box2">
+		이벤트 메소드를 활용한 무명함수등록
+	</div>
+	<script>
+		var box2 = document.getElementsByClassName("box2");
+		box2[0].addEventListener("mouserover",function(){});
+		box2[0].addEventListener("mouserout",function(){});
+	</script>
+
+	<script>
+		// $(".box2").mouseover(function(){});
+		// $(".box2").on("mouseover",function(){});
+		// $(document).ready(function(){});
+		// window.onload = function(){};
+	</script>
+
+
+	<div class="box3">버튼클릭하면 이벤트객체를 출력합니다.</div>
+
+	<p onclick="fun(event)">클릭</p>
+	<div onclick="fun(event)">클릭</div>
+	<button onclick="fun(event)">클릭</button>
+	<br>
+	<a href="#" onclick="fun(event)">클릭</a>
+
+	<a href="#" onclick="return false">링크안됨</a>
+
+	<script>
+		function fun(event){
+			event.preventDefault();
+			console.log(event.type);
+			var txt = "type : " + event.type + "<br>";
+			txt += "target : " + event.target + "<br>";
+
+			var box3 = document.getElementsByClassName("box3")[0];
+			box3.innerHTML = txt;
+
+
+		}
+	</script>
+</body>
+</html>

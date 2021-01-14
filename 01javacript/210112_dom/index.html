@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dom</title>
+</head>
+<body>
+	<p id="firstP" style="background:yellow" onclick="this.style.color='white'">
+		이것은 <span style="color:red">문장입니다.</span>
+	</p>
+	<button onclick="change()">스타일변경</button>
+
+	<script>
+		var p = document.getElementById("firstP");
+		var txt = "p.id" + p.id + "\n";
+		txt += "태그네임 : " + p.tagName + "\n"; // txt = txt + p.tagName;
+		txt += "내용물 : " + p.innerHTML + "\n";
+		txt += "자식요소개수 : " + p.childElementCount + "\n";
+		txt += "이벤트 : " + p.onclick + "\n";
+
+		//document.getElementById("firstP").innerHTML = "안녕하세요"; // set
+		//document.getElementById("firstP").innerHTML; // get
+		// var txt = document.getElementById("firstP").id;
+		console.log(txt);
+
+		//document.getElementById("firstP").style.color = "red";
+
+		function change(){
+			var tP = document.getElementById("firstP");
+			tP.style.color = "green";
+			tP.style.fontSize = "30px"; // font-size
+			tP.style.margin = "20px";
+		}
+	</script>
+
+	<style>
+		.box{
+			width: 200px;position: relative;
+			transition:0.3s;
+		}
+		.box img{width: 100%;}
+	</style>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+	</div>
+	<!-- <button onclick="move0()">0</button> -->
+	<button onclick="move(100)">left +100</button>
+	<button onclick="move(0)">0</button>
+	<button onclick="move(1000)">left 1000</button>
+	<style>
+		.box1{
+			width: 200px;height: 50px;border: 1px solid #000;
+			border-radius: 25px;text-align: center;line-height:50px;
+			background-color: #fff;
+		}
+		.box1:hover{background-color:pink;}
+	</style>
+	<div class="box1" onclick="bodyColor('#f00')">레드배경색</div>
+	<div class="box1" onclick="bodyColor('#00f')">파랑배경색</div>
+	<div class="box1" onclick="bodyColor('#fff')">배경색복구</div>
+	<script>
+		function move0(){
+			var box = document.getElementsByClassName("box")[0];
+			box.style.left = "0";
+		}
+		function move100(){
+			var box = document.getElementsByClassName("box")[0];
+			box.style.left = "100px";
+		}
+		function move(left){
+			var box = document.getElementsByClassName("box")[0];
+			box.style.left = left + "px";
+		}
+
+		function bodyColor(color){
+			var bc = document.getElementsByTagName("body")[0];
+			bc.style.backgroundColor = color;
+		}
+
+	</script>
+
+
+	<!-- 백그라운드 이미지 변경 스크립트 만들기 -->
+</body>
+</html>

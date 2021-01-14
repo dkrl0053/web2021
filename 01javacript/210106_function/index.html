@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>function</title>
+</head>
+<body>
+	<a href="#ga">링크</a> <a href="#">연습</a>
+	<div id="top">top</div>
+
+	<div>Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Atque, vitae fugiat. Ex quisquam necessitatibus minus eum, voluptate omnis, eveniet illo dignissimos amet eos maiores voluptates ad optio nostrum ea officia itaque, quaerat at! Vel sit, optio, et iusto illo sequi, ratione, fugiat quidem tenetur voluptate culpa. Natus ipsum, aperiam eaque nobis expedita ad libero, ratione laborum saepe fugit. Quasi accusantium omnis vero, perferendis, quos esse quia exercitationem assumenda vitae similique voluptatem ratione quisquam consequuntur sapiente laboriosam quibusdam? Possimus odio esse, ab aspernatur sed aliquam est reiciendis nostrum autem corporis quo perspiciatis atque dolorem ipsum, eveniet voluptates eos quam dolore ipsa?</div>
+	<div>Libero temporibus labore vitae deleniti velit, quos. Officia consequuntur dignissimos animi recusandae, adipisci tempora veritatis, possimus error inventore placeat temporibus, praesentium repudiandae non dolorum vel dolore. Ab necessitatibus alias dignissimos. Commodi libero alias eveniet impedit repudiandae, in tempora, aliquid sed assumenda temporibus officiis culpa quibusdam perferendis quod quisquam a odio neque unde nesciunt reiciendis. Aperiam in impedit accusamus animi laborum fuga tempora magni, incidunt! Dolore similique vel labore, unde hic qui porro neque aliquam itaque error harum dolor corrupti quidem rem iste assumenda tempora rerum accusantium praesentium sit consequatur quae magnam earum. Aperiam, dolor neque aliquid molestias nobis sit voluptatibus.</div>
+	<div id="ga">Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Voluptatum numquam id, dolores. Ducimus molestiae, eveniet, quae consequuntur, veritatis sint amet itaque dignissimos esse rerum magnam tempore laborum quisquam accusantium voluptate.</div>
+	<script>
+		
+		function han(){
+			
+			alert("안녕하세요");
+			return false;
+
+
+		}
+	</script>
+	<div style="height:1000px">
+		<a href="#top">위로</a>
+		<a href="javascript:void(0)">연습</a>
+		<a href="#" onclick="return false">연습</a>
+	</div>
+
+	<script>
+
+		function printMsg(name,age){
+			// document.write("학생이름 : " + name + "<br>");
+			// document.write("나이 : " + age + "살<br>");
+			document.getElementById("sName").innerHTML = "학생이름 : "+ name + ", 나이 : " + age + "살";
+
+
+			//$("#sName").html("학생이름 : "+ name + ", 나이 : " + age + "살");
+		}
+		//printMsg("홍길동",20);
+
+
+	</script>
+	<div id="sName"></div>
+	<button type="button" onclick="printMsg('홍길동',20)">학생정보</button>
+	<button type="button" onclick="printMsg('김철수',25)">학생정보1</button>
+	<br>
+
+
+
+	<div id="hap"></div>
+	
+	<script>
+		var result;
+		function add(name,n){
+			document.write(name+ "학생이 1부터 "+n+"까지 덧셈 수행<br>");
+			var sum = 0;
+			for(var i=1; i<=n;i++){
+				//document.write(i);
+				sum = sum + i; //sum += i;
+			}
+			//document.write(sum);
+			return sum;
+		}
+
+		result = add("홍길동",10);
+		document.write("결과 : " + result +"<br>");
+		document.getElementById("hap").innerHTML = result;
+
+		result = add("이영희",100);
+		document.write("결과 : " + result +"<br>");
+		document.getElementById("hap").innerHTML = result;
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <p id="name"></p>
+   <p id="speedup"></p>
+   <p id="speeddown"></p>
+   <p id="speedPlus"></p>
+   <p id="speedName"></p>
+
+
+   <p>name[0] 자동차이름 : <span class="name"></span></p>
+   <p>name[1] 자동차이름1 : <span class="name"></span></p>
+
+   <script>
+      var car = ["소나타",100,"white"];
+      var car1 = {
+         id:"ddd88888",
+         name:"volt",
+         speed:200, // car1.speed
+         color:"red", // car1.color
+         start:function(){
+            return this.speed + 200;
+            // return car1.speed + 200;  // car1.start()
+         },
+         speedup:function(){
+            return this.speed+10;
+         },
+         speeddown:function(){
+            return this.speed - 10;
+         },
+         speedPlus:function(s){
+            return this.speed + s;
+         },
+         speedName:function(s,name){
+            return this.speed + s + name;
+         }
+      }
+      document.getElementById("name").innerHTML = car1.name; // $("#name").html(car1.name);
+      document.getElementById("speedup").innerHTML = "속도업 : " + car1.speedup();
+      document.getElementById("speeddown").innerHTML = car1.speeddown();
+      document.getElementById("speedPlus").innerHTML = car1.speedPlus(20);
+      document.getElementById("speedName").innerHTML = car1.speedName(100,"소나타");
+
+      document.getElementsByClassName("name")[1].innerHTML = car1.name; // $(".name").eq(1).html(car1.name);
+      document.getElementsByTagName("p")[0].innerHTML = car1.name;
+    </script>
+    
+</body>
+</html>

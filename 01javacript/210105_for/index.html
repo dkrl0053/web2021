@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>for</title>
+
+	<style>
+		.dan{float: left;width: 100px;}
+	</style>
+	<script>
+		var dan = 3;// 3 x 1 = 3 
+		document.write(dan + " x 1 = " + (dan*1) + "<br>");  
+		document.write(dan + " x 2 = " + (dan*2) + "<br>");  
+		document.write(dan + " x 3 = " + (dan*3) + "<br>");  
+		document.write(dan + " x 4 = " + (dan*4) + "<br>");  
+		document.write(dan + " x 5 = " + (dan*5) + "<br>");  
+		document.write(dan + " x 6 = " + (dan*6) + "<br>");  
+		document.write(dan + " x 7 = " + (dan*7) + "<br>");  
+		document.write(dan + " x 8 = " + (dan*8) + "<br>");  
+		document.write(dan + " x 9 = " + (dan*9) + "<br>");  
+
+		// for(초기값;조건식;증감식){
+		// 	실행문;
+		// }
+		for(var i=1;i<10;i++){
+			document.write(dan + " x " + i + " = " + (dan*i) +"<br>");
+		}
+
+		
+		for(var i=2;i<=9;i++){
+			document.write("<div class='dan'>");
+			document.write("<h2>");
+			document.write(i+"단");
+			document.write("</h2>");
+
+			for(var y=1;y<=9;y++){
+				document.write(i + " x " + y + " = " + (i*y)+ "<br>");
+			}
+			document.write("</div>");
+
+		}
+
+
+
+		// var st1 = "abcde";
+		// var st2 = "fghij";
+		// var st3 = "klmno";
+
+		var st = ["서울","부산","대구","경기","제주","부산"]; //array
+		console.log("배열개수 : " + st.length);
+		// st[0] -> 서울
+		for(var i=0;i<st.length;i++){
+			document.write(st[i]);
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

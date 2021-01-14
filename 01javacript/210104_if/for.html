@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    
+</head>
+<body>
+    <script>
+        var dan2 = 2;
+		document.write(dan2 + " x 1 = " + (dan2*1) + "<br>");
+		document.write(dan2 + " x 2 = " + (dan2*2) + "<br>");
+		document.write(dan2 + " x 3 = " + (dan2*3) + "<br>");
+		document.write(dan2 + " x 4 = " + (dan2*4) + "<br>");
+		document.write(dan2 + " x 5 = " + (dan2*5) + "<br>");
+		document.write(dan2 + " x 6 = " + (dan2*6) + "<br>");
+		document.write(dan2 + " x 7 = " + (dan2*7) + "<br>");
+		document.write(dan2 + " x 8 = " + (dan2*8) + "<br>");
+		document.write(dan2 + " x 9 = " + (dan2*9) + "<br>");
+
+        // for(초기값;조건식;증감식){실행문;}
+        
+        for(var j=1;j<=9;j++){
+			document.write("<p class='number'>");
+			document.write(dan2 + " x " + j + " = " + (dan2*j));
+			document.write("</p>");
+		}
+
+		var table = "<table>";
+		table += "<tr>"; 
+		for(var i=1;i<10;i++){
+				table += "<td>" + dan2 + " x " + i + " = " + (dan2*i) + "</td>";
+		}
+		table += "</tr>";
+		table += "</table>"
+
+		document.write(table);
+    </script>
+</body>
+</html>

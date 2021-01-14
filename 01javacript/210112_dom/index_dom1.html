@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dom</title>
+</head>
+<body>
+	
+	<button onclick="change()">클릭</button>
+	<button onclick="init()">원래상태</button>
+	<p>
+		Lorem ipsum <p>dolor</p> sit <span>amet</span> consectetur adipisicing elit. Quo, accusamus officia nihil magni <span>laboriosam</span> voluptatem sint numquam sequi <span>facilis</span> consequatur, et eos itaque <span>molestias</span>, in corporis labore, impedit quod <span>libero</span>.
+	</p>
+	<script>
+		function change(){
+			var sp = document.getElementsByTagName("span");
+			// sp[0].style.color = "red";
+			// sp[1].style.color = "red";
+			// sp[2].style.color = "red";
+			// sp[3].style.color = "red";
+			// sp[4].style.color = "red";
+
+			for(var i=0;i<sp.length;i++){
+				sp[i].style.color = "orchid";
+				sp[i].style.fontWeight = "bold";
+			}
+		}
+
+		function init(){
+			var sp = document.getElementsByTagName("span");
+			for(var i=0;i<sp.length;i++){
+				sp[i].style.color = "initial";
+				sp[i].style.fontWeight = "initial";
+			}
+		}
+	</script>
+
+	<style>
+		.boxWrap{color:red;}
+		.box{color:initial;}
+	</style>
+
+	<div class="boxWrap">
+		<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Sit aliquid rerum maiores vitae accusantium quidem similique, ipsa minus? Dolorem veritatis consectetur ipsum culpa dolores architecto adipisci perspiciatis ducimus, aliquid tempore?</p>
+		<div class="box">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia reprehenderit magnam eveniet hic voluptatum et commodi? Qui sunt ex quaerat voluptatum, natus sit vero animi, dolorem sint. Accusantium, laborum, aperiam!
+		</div>
+	</div>
+</body>
+</html>
