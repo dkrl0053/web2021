@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+</head>
+<body>
+    <button onclick="window.open('https:/\/www.naver.com',
+    'window','width=500,height=500')">윈도우 창 열기</button>
+    <div onclick="winopen()">다음창 열기</div>
+    <div onclick="closeWin()">닫기</div>
+    <div onclick="uwinOpen()">영상보기</div>
+    <script>
+        var myWin;
+        function winopen(){
+            myWin = window.open("http://www.daum.net","daum","width=500,height=500")
+        }
+        function closeWin(){
+            window.close();
+        }
+
+        function uwinOpen(){
+            window.open("utube.html","youtube","width=560, height=315")
+        }
+    </script>
+</body>
+</html>

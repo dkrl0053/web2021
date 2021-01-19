@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".visual").bxSlider();
+        });
+    </script>
+    <style>
+        .submenu{
+            display: none;
+        }
+        nav.gnb{
+            width: 1000px;
+            margin: 0 auto;
+            /* background: skyblue; */
+        }
+        nav.gnb>ul>li{
+            float: left;
+            width: 200px;
+            position: relative;
+        }
+        nav.gnb>ul>li>a{
+            display:block;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+        }
+        nav.gnb>ul>li:hover{
+            background: #00f;
+        }
+        nav.gnb>ul>li>a:hover{
+            color: #fff;
+        }
+
+        /* nav.gnb>ul>li:nth-child(1) .submenu{
+             display:block;
+         } */
+         .submenu{
+             padding-bottom: 10px;
+             position: absolute;
+             width: 100%;
+             z-index: 2;
+             background: #00f;
+         } 
+         .submenu li a{
+             display:block;
+             text-align: center;
+             line-height: 30px;
+             color: #fff;
+         }
+         .submenu li:hover{
+             background: skyblue;
+         }
+
+         nav.gnb>ul>li:hover .submenu{
+             display:block;
+         }
+         .visual{
+             height: 400px;
+             background: pink;
+         }
+         .bx-wrapper {
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;}
+
+    </style>
+</head>
+<body>
+    <nav class="gnb">
+        <ul class="clearfix">
+            <li><a href="#">menu1</a><!--mainmenu-->
+                <ul class="submenu"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu1</a><!--mainmenu-->
+                <ul class="submenu"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu1</a><!--mainmenu-->
+                <ul class="submenu"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu1</a><!--mainmenu-->
+                <ul class="submenu"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu1</a><!--mainmenu-->
+                <ul class="submenu"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="visual">
+        <img src="../images/pc01.jpg" alt="">
+        <img src="../images/pc02.jpg" alt="">
+        <img src="../images/pc03.jpg" alt="">
+    </div>
+    
+</body>
+</html>
