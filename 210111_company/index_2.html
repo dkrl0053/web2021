@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>company</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style_2.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$(".slider").bxSlider();
+			$(".slider1st").bxSlider({
+				controls:false,
+				pager:false
+			});
+
+
+			$(".toggleMenu").click(function(){
+				var toggle = $(".toggleMenu").attr("class"); //get
+				console.log(toggle); // toggleMenu
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300);
+				}
+
+			});
+
+			$(window).resize(function(){
+				$(".toggleMenu").removeClass("change");
+				$("#main_menu").removeAttr("style");
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<header id="main_header">
+		<div id="header_top" class="clearfix">
+			<h1 class="logo"><a href="#">LOGO</a></h1>
+			<nav id="main_menu">
+				<ul class="clearfix">
+					<li><a href="#">회사소개</a></li>
+					<li><a href="#">윤리경영</a></li>
+					<li><a href="#">제품/기술</a></li>
+					<li><a href="#">지속가능성</a></li>
+					<li><a href="#">홍보채널</a></li>
+					<li><a href="#">인재채용</a></li>
+				</ul>
+			</nav>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li class="slider_1st"> <!-- bxslider por -->
+					<!-- <img src="images/mainimg01.jpg"> -->
+					<div class="slider_txt">
+						<h3>Lorem ipsum, dolor sit.</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, nulla.</p>
+					</div>
+				</li>
+				<li class="slider_2st"> <!-- bxslider por -->
+					<!-- <img src="images/mainimg01.jpg"> -->
+					<div class="slider_txt">
+						<h3>Lorem ipsum, dolor sit.</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, nulla.</p>
+					</div>
+				</li>
+
+
+			</ul>
+		</div>
+		<div class="content">
+			<!-- ul.clearfix>li.ct$st*11 -->
+			<ul class="clearfix">
+				<li class="ct1st">
+					<a href="#">
+						<img src="images/icon01_01.png" alt="뉴스레터신청하기">
+						<p>뉴스레터신청</p>
+					</a>
+				</li>
+				<li class="ct2st">
+					<a href="#">
+						<img src="images/img01_01.jpg" alt="영상" class="bgImg">
+						<img src="images/icon01_06.png" alt="실행" class="play">
+					</a>
+				</li>
+				<li class="ct3st">
+					<div class="sliderWrap">
+						<ul class="slider1st">
+							<li class="news clearfix">
+								<div class="left">Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Dolorem, ab?</div>
+								<div class="right">
+									<img src="images/img01_02.jpg" alt="img">
+								</div>
+							</li>
+							<li class="news clearfix">
+								<div class="left">Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Dolorem, ab?</div>
+								<div class="right">
+									<img src="images/img01_02.jpg" alt="img">
+								</div>
+							</li>
+							<li class="news clearfix">
+								<div class="left">Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Dolorem, ab?</div>
+								<div class="right">
+									<img src="images/img01_02.jpg" alt="img">
+								</div>
+							</li>
+						</ul>
+						<h2>뉴스</h2>
+						<div class="btn clearfix">
+							<img src="images/btn01_01.jpg" alt="" class="prevBtn">
+							<img src="images/btn01_02.jpg" alt="" class="nextBtn">
+						</div>
+					</div>
+				</li>
+				<li class="ct4st">
+					<a href="#">
+						<img src="images/icon01_02.png" alt="뉴스레터신청하기">
+						<p>뉴스레터신청</p>
+					</a>
+				</li>
+				<li class="ct5st">
+					<a href="#">
+						<img src="images/icon01_03.png" alt="뉴스레터신청하기">
+						<p>뉴스레터신청</p>
+					</a>
+				</li>
+				<li class="ct6st">
+					<a href="#">
+						<img src="images/img01_03.jpg" alt="빛과에너지">
+						<div class="txt">
+							<h3>전력 및 에너지 플렌트</h3>
+							<p>세상을 밝히는<br>빛과 에너지</p>
+						</div>
+					</a>
+				</li>
+				<li class="ct7st">
+					<a href="#">
+						<img src="images/img01_06.jpg" alt="빛과에너지">
+						<div class="txt">
+							<h3>전력 및 에너지 플렌트</h3>
+							<p>세상을 밝히는<br>빛과 에너지</p>
+						</div>
+					</a>
+				</li>
+				<li class="ct8st">
+					<a href="#">
+						<img src="images/img01_04.jpg" alt="빛과에너지">
+						<div class="txt">
+							<h3>전력 및 에너지 플렌트</h3>
+							<p>세상을 밝히는<br>빛과 에너지</p>
+						</div>
+					</a>
+				</li>
+				<li class="ct9st">
+					<a href="#">
+						<img src="images/icon01_04.png" alt="뉴스레터신청하기">
+						<p>뉴스레터신청</p>
+					</a>
+				</li>
+				<li class="ct10st">
+					<a href="#">
+						<img src="images/icon01_05.png" alt="뉴스레터신청하기">
+						<p>뉴스레터신청</p>
+					</a>
+				</li>
+				<li class="ct11st">
+					<a href="#">
+						<img src="images/img01_05.jpg" alt="빛과에너지">
+						<div class="txt">
+							<h3>전력 및 에너지 플렌트1</h3>
+							<p>세상을 밝히는<br>빛과 에너지</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+	</header>
+	<div class="container">
+		<div class="section">
+			<h4>비젼</h4>
+			<p>VISION 2021</p>
+
+			<ul class="clearfix">
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_01.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, modi?</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_02.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, modi?</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_03.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, modi?11</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_04.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, modi?</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topMenu</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        
+        nav.gnb{
+            width: 1000px;
+            margin: 0 auto;
+            background: pink;
+            position: relative;
+        }
+        nav.gnb>ul>li{
+            float: left;
+            width: 200px;
+            position: relative;
+        }
+        nav.gnb>ul>li>a{
+            display:block;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+        }
+        nav.gnb>ul>li:hover{
+            background: #f00;
+        }
+        nav.gnb>ul>li>a:hover{
+            color: #fff;
+        }
+
+        nav.gnb>ul>li:hover .submenu{
+            display:block;
+        }
+        .submenu{
+            display: none;
+        }
+        .submenu{
+            position: absolute;
+            background: #ccc;
+            left: 0;
+            width: 100%;
+        }
+        .submenu li{
+            float: left;
+            width: 100px;
+        }
+        .submenu li>a{
+            display:block;
+            line-height: 35px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="gnb">
+        <ul class="clearfix">
+            <li><a href="#">menu1</a><!--mainmenu-->
+                <ul class="submenu clearfix"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu2</a></li>
+                    <li><a href="#">smenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a><!--mainmenu-->
+                <ul class="submenu clearfix"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu2</a></li>
+                    <li><a href="#">smenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu3</a><!--mainmenu-->
+                <ul class="submenu clearfix"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu2</a></li>
+                    <li><a href="#">smenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu4</a><!--mainmenu-->
+                <ul class="submenu clearfix"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu2</a></li>
+                    <li><a href="#">smenu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu5</a><!--mainmenu-->
+                <ul class="submenu clearfix"><!--submenu-->
+                    <li><a href="#">smenu1</a></li>
+                    <li><a href="#">smenu2</a></li>
+                    <li><a href="#">smenu3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

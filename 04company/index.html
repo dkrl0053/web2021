@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>company</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/all.css">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/jquery.bxslider.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".visual_slider").bxSlider({
+        controls:false,
+        pagerCustom:".slider_tap"
+				// auto:true,
+      });
+
+      var newsSlider = $(".news_slider").bxSlider({
+        controls:false,
+        pager:false,
+      });
+
+      $(".next_btn").click(function(){
+        newsSlider.goToNextSlide();
+      });
+      $(".prev_btn").click(function(){
+        newsSlider.goToPrevSlide();
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <header id="header">
+    <div class="header_wrap">
+      <h1>
+        <a href="#"><img src="img/top_logo.png" alt=""></a>
+      </h1>
+      <nav class="gnb">
+        <ul class="gnb_depth_1 clearfix">
+          <li>
+            <a href="#">브랜드</a>
+            <ul class="gnb_depth_2 clearfix">
+              <li>
+                <a href="#">더샵</a>
+              </li>
+              <li>
+                <a href="#">로고</a>
+              </li>
+              <li>
+                <a href="#">히스토리</a>
+              </li>
+              <li>
+                <a href="#">뉴스</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">상품</a>
+            <ul class="gnb_depth_2">
+              <li>
+                <a href="#"><strong>디자인</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>기술</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>서비스</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>커뮤니티</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>조경</strong></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">단지</a>
+            <ul class="gnb_depth_2">
+              <li>
+                <a href="#"><strong>분양단지</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>공사단지</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>입주단지</strong></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">갤러리</a>
+            <ul class="gnb_depth_2">
+              <li>
+                <a href="#"><strong>더샵갤러리</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>소식</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>행사·관람</strong></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="header_util">
+        <ul>
+          <li>
+            <a href="#"><p>마이더샵</p></a>
+          </li>
+          <li>
+            <a href="#"><p>고객센터</p></a>
+          </li>
+          <li>
+            <a href="#" class="search"><p class="right">단지검색</p></a>            
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="toggle_menu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <div class="visual_slider_wrap">
+      <ul class="visual_slider">
+         <li>
+           <img src="img/20201228.183630.6283.jpg" alt="">
+           <div class="slider_txt">
+             <p>15,000여 세대 미니신도시로 거듭날 청천·산곡-그 중심에 캐슬 & 더샵이 들어옵니다!</p>
+             <h2>부평 캐슬 & 더샵 퍼스트</h2>
+             <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
+             <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+           </div>
+         </li>
+         <li>
+          <img src="img/20201228.183724.0336.jpg" alt="">
+          <div class="slider_txt">
+            <p>필리핀 천혜의 자연환경에서 모든 것을 누리다.</p>
+            <h2>더샵 클락힐즈</h2>
+            <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
+            <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+          </div>
+        </li>
+        <li>
+          <img src="img/20201228.232006.8497.jpg" alt="">
+          <div class="slider_txt">
+            <p>디오션시티 그리고 더샵 MORE BRILLIANT NEW AGAIN</p>
+            <h2>더샵 디오션시티 2차</h2>
+            <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
+            <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+          </div>
+        </li>
+        <li>
+          <img src="img/20210113.195814.4900.jpg" alt="">
+          <div class="slider_txt">
+            <p>반포에 더샵이 찾아옵니다.</p>
+            <h2>더샵 반포리버파크</h2>
+            <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
+            <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+          </div>
+        </li>
+        <li>
+          <img src="img/20201228.183711.1513.jpg" alt="">
+          <div class="slider_txt">
+            <p>더샵의 프리미엄 탕정을 품다!</p>
+            <h2>더샵 탕정역센트로</h2>
+            <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
+            <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+          </div>
+        </li>
+      </ul>
+      <div class="slider_tap">
+        <a href="#" data-slide-index="0"></a>
+        <a href="#" data-slide-index="1"></a>
+        <a href="#" data-slide-index="2"></a>
+        <a href="#" data-slide-index="3"></a>
+        <a href="#" data-slide-index="4"></a>
+      </div>
+    </div>
+
+
+    <div id="content">
+      <ul class="clearfix">
+        <li class="ct_1">
+          <a href="#">
+            <div class="ct_icon"></div>
+            <p>분양캘린더</p>
+          </a>
+        </li>
+        <li class="ct_2">
+          <a href="#">
+            <div class="play_img"></div>
+            <div class="over"></div>
+            <img src="img/icon01_06.png" alt="" class="play_btn">
+          </a>
+        </li>
+        <li class="ct_3">
+          <div class="news_slider_wrap">
+            <ul class="news_slider">
+              <li class="news clearfix">
+                <div class="left">
+                  <div class="news_slider_txt">
+                    <h4>뉴스</h4>
+                    <p>더샵 디오션시티 2차,<br>
+                    전북최대 롯데몰 인근 입지</p>
+                    <p class="n_date">2020.12.21</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="news_slider_bg"></div>
+                </div>
+              </li>
+              <li class="news clearfix">
+                <div class="left">
+                  <div class="news_slider_txt">
+                    <h4>뉴스</h4>
+                    <p>더샵 디오션시티 2차,<br>
+                    전북최대 롯데몰 인근 입지</p>
+                    <p class="n_date">2020.12.21</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="news_slider_bg"></div>
+                </div>
+              </li>
+              <li class="news clearfix">
+                <div class="left">
+                  <div class="news_slider_txt">
+                    <h4>뉴스</h4>
+                    <p>더샵 디오션시티 2차,<br>
+                    전북최대 롯데몰 인근 입지</p>
+                    <p class="n_date">2020.12.21</p>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="news_slider_bg"></div>
+                </div>
+              </li>
+            </ul>
+            <div class="n_slider_btn clearfix">
+              <div class="prev_btn">
+                <em><img src="img/prev_btn.png" alt=""></em>
+              </div>
+              <div class="next_btn">
+                <em><img src="img/next_btn.png" alt=""></em>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="ct_4">
+          <a href="#">
+            <div class="ct_icon"></div>
+            <p>분양대금조회</p>
+          </a>
+        </li>
+        <li class="ct_5">
+          <a href="#">
+            <div class="ct_icon"></div>
+            <p>입주예약</p>
+          </a>
+        </li>
+        <li class="ct_6">
+          <a href="#">
+            <div class="ct_txt">
+              <h3>디자인</h3>
+              <p>더샵의 본질적이고</p>
+              <p>품격있는</p>
+              <p>디자인을 만나다</p>
+            </div>
+          </a>
+        </li>
+        <li class="ct_7">
+          <a href="#">
+            <div class="ct_txt">
+              <h3>기술</h3>
+              <p>개별</p>
+              <p>스마트기술을</p>
+              <p>통합한</p>
+              <p>더샵만의</p>
+              <p>스마트기술</p>
+              <p>브랜드</p>
+            </div>
+          </a>
+        </li>
+        <li class="ct_8">
+          <a href="#">
+            <div class="ct_txt_b">
+              <h3>커뮤니티</h3>
+              <p>다양한 라이프 스타일을 누리고</p>
+              <p>공유하는 더샵의 커뮤니티</p>
+            </div>
+          </a>
+        </li>
+        <li class="ct_9">
+          <a href="#">
+            <div class="ct_icon"></div>
+            <p>고객센터</p>
+          </a>
+        </li>
+        <li class="ct_10">
+          <a href="#">
+            <div class="ct_icon"></div>
+            <p>A/S신청</p>
+          </a>
+        </li>
+        <li class="ct_11">
+          <a href="#">
+            <img src="" alt="">
+            <div class="ct_txt_b">
+              <h3>조경</h3>
+              <p>소중하고 아름다운 가치를</p>
+              <p>조경에 담아 고객과 함께 합니다</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="merit_wrap">
+      <img src="img/merit_title.svg" alt="">
+      <div class="merit">
+        <ul class="clearfix">
+          <li class="merit_1">
+            <a href="#">
+              <div class="m_icon"></div>
+              <h4>RELIABLE <br> SAFETY</h4>
+              <div class="m_p">
+                <p>마음 놓고 지낼 수 있는</p>
+                <p>안전한 주거 환경을 만들어 내는</p>
+                <p><strong>신뢰할 수 있는 안전</strong></p>
+              </div>
+            </a>
+          </li>
+          <li class="merit_2">
+            <a href="#">
+              <div class="m_icon"></div>
+              <h4>COMFORTABLE<br>REST</h4>
+              <div class="m_p">
+                <p>안락한 환경에서</p>
+                <p>마음 편히 푹 쉴 수 있는</p>
+                <p>그래서 활력이 생기는</p>
+                <p><strong>안락한 휴식</strong></p>
+              </div>
+            </a>
+          </li>
+          <li class="merit_3">
+            <a href="#">
+              <div class="m_icon"></div>
+              <h4>ENHANCED<br>CONVENIENCE</h4>
+              <div class="m_p">
+                <p>고품질 시설과 서비스를 제공하여</p>
+                <p>편리하고 편안한 생활을 가능케 해주는</p>
+                <p><strong>강화된 편의</strong></p>
+              </div>
+            </a>
+          </li>
+          <li class="merit_4">
+            <a href="#">
+              <div class="m_icon"></div>
+              <h4>REFINED<br>DESIGN</h4>
+              <div class="m_p">
+                <p>세련된 디자인으로</p>
+                <p>주거 환경의 프리미엄을 완성하는</p>
+                <p><strong>세련된 디자인</strong></p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="social_wrap clearfix">
+      <div class="social_tit">
+        <div class="s_tit_plus">
+          <img src="" alt="">
+          <h1>더샵</h1>
+          <h1>플러스친구</h1>
+          <p>고객님들의</p>
+          <p>다양한 의견과</p>
+          <p>새로운 소식들을</p>
+          <p>더샵의 소셜계정에서도</p>
+          <p>만나보세요!</p>
+        </div>
+        <div class="s_tit_youtube">
+          <img src="" alt="">
+          <h1>더샵</h1>
+          <h1>TV</h1>
+          <p>고객님들의</p>
+          <p>다양한 의견과</p>
+          <p>새로운 소식들을</p>
+          <p>더샵의 소셜계정에서도</p>
+          <p>만나보세요!</p>
+        </div>
+      </div>
+      <div class="social_board_ct">
+        <div class="social_board_1">
+           <ul>
+             <li>
+               <a href="#">
+                 <img src="img/social_img1.jpg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>더샵의 새로운 광고모델로 배우 김수현을 선정하였습니다. 이번 광고는 '주거의 기본에 충실해 고객 만족에 최선을 다하겠다'는 포스코 건설의 주거 철학을 담은 슬로건 '주거의 본이 되다'가 광고 문구로 사용됐으며, 김수현씨의 철저한 자기관리와 최선을 다하는 이미지가 더샵과 함께 시너지를 낼 것으로 기대하고 있습니다.</span>
+                  <div class="like_re_wrap">
+                    <div class="like_icon"></div>
+                    <p>31</p>
+                    <div class="re_icon"></div>
+                    <p>13</p>
+                  </div>
+                </a>
+               </li>
+           </ul>
+        </div>
+        <div class="social_board_1">
+          <ul>
+            <li>
+              <a href="#">
+                <span>1주택자 4%늘 때 다주택자16%늘었다. 통계청에 따르면 2018년 기준, 국내 일반 가구수는 약 1,997만 9천 가구입니다. 같은 시기 주택수는 이보다 많은 2,018만 8천 호죠.</span>
+                <div class="like_re_wrap">
+                  <div class="like_icon"></div>
+                  <p>6</p>
+                  <div class="re_icon"></div>
+                  <p>4</p>
+                </div>
+              </a>
+             </li>
+            <li>
+              <a href="#">
+                <img src="img/social_img3.png" alt="">
+               </a>
+             </li>
+          </ul>
+        </div>
+        <div class="social_board_1">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="img/img_l.jpg" alt="">
+               </a>
+             </li>
+             <li>
+               <a href="#">
+                 <span>"앞으로 해운대에 이런 단지는 다시 나오기 힘듭니다."<br> (해운대 H공인중개사무소 대표)<br>해운대 앞바다 최 중심. 2019년 11월 29일 사용 승인에 따라 12월 드디어 '해운대 엘시티(LCT)'가 본격 입주를 시작했습니다.</span>
+                 <div class="like_re_wrap">
+                   <div class="like_icon"></div>
+                   <p>15</p>
+                   <div class="re_icon"></div>
+                   <p>20</p>
+                 </div>
+               </a>
+              </li>
+          </ul>
+       </div>
+      </div>
+    </section>
+    <section id="item_wrap">
+      <div class="item">
+        <div class="item_txt">
+          <img src="img/item_1.png" alt="">
+          <h3>새집나들이</h3>
+          <a href="#">자세히보기</a>
+        </div>
+      </div>
+      <div class="item">
+        <img src="img/item_2.png" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer_info">
+      <span class="footer_logo">
+        <img src="img/footer_logo.png" alt="">
+      </span>
+
+      <ul class="footer_etc">
+        <li>
+          <a href="#">개인정보처리방침</a>
+        </li>
+        <li>
+          <a href="#">이용약관</a>
+        </li>
+        <li>
+          <a href="#">이메일주소무단수집거부</a>
+        </li>
+        <li>
+          <a href="#">그룹방문예약</a>
+        </li>
+      </ul>
+
+      <div class="address">
+        <p>(주)포스코건설</p>
+        <p>
+          <span>대표자 : 한성희</span>
+          <span>주소 : 경상북도 포항시 남구 대송로 180</span>
+          <span>사업자등록번호 : 506-81-02280</span>
+        </p>
+        <div class="copyright">© 2020 Posco Engineering Construction Co., LTD. All Rights Reserved</div>
+      </div>
+
+      <select name="footer_link" id="footer_link" class="select" onchange="gotoSite(this.value);">
+        <option value="">FAMILY SATE</option>
+        <option value="http://www.posco.co.kr">포스코</option>
+        <option value="">더샵라이프</option>
+        <option value="">더샵라이프 웹진</option>
+      </select>
+    </div>
+  </footer>
+   
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+body {
+  position: relative;
+}
+
+body::before {
+  position: relative;
+}

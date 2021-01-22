@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modal</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/colorbox.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery.colorbox-min.js"></script>
+
+  <script>
+    // $(document).ready()(function(){});
+    // jquery(document).ready()(function(){});
+    // $(function(){});
+
+    $(function(){
+            $("body").append("<div id=\"glayLayer\"></div><div id='overLayer'></div>");
+            $("#overLayer").html("<img src='../images/tourgallery_j1a.jpg'> </img>");
+            $("a.modal").click(function(e){
+                var ahref = $(this).attr("href");
+                console.log(ahref);
+                e.preventDefault(); // del a tag property === return false
+                $("#glayLayer").show();
+                $("#overLayer").show().html("<img src='"+ahref+"'></img>");
+            });
+            $("#glayLayer,#overLayer").click(function(){
+                $("#glayLayer,#overLayer").hide();
+            });
+            $(".group1").colorbox({
+                rel:"modal"
+            });
+        });
+
+
+  </script>
+
+<style>
+  html,body{
+    background: #0f0;
+    height: 100%;
+  }
+  .box{
+    background: #f00;
+    width: 100px;
+    height: 100px;
+  }
+  #glayLayer{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+  #overLayer{
+    position: fixed;
+    /* width: 300px; */
+    height: 280px;
+    background: skyblue;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+  }
+  ul.layer{
+    width: 470px;
+    margin: 0 auto;
+  }
+  ul.layer li{
+    float: left;
+    margin-right: 10px;
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  ul.layer li:nth-child(3n){
+    margin-right: 0;
+  }
+  ul.layer li img{
+    display: block;
+  }
+</style>
+
+</head>
+<body>
+  <ul class="layer">
+    <li>
+      <a href="../images/tourgallery_j1a.jpg" class="modal">
+        <img src="../images/tourgallery_j1.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j2a.jpg" class="modal">
+        <img src="../images/tourgallery_j2.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j3a.jpg" class="modal">
+        <img src="../images/tourgallery_j3.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j4a.jpg" class="modal">
+        <img src="../images/tourgallery_j4.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j5a.jpg" class="modal">
+        <img src="../images/tourgallery_j5.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="../images/tourgallery_j6a.jpg" class="modal">
+        <img src="../images/tourgallery_j6.jpg" alt="">
+      </a>
+    </li>
+  </ul>
+</body>
+</html>
