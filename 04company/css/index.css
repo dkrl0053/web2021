@@ -656,14 +656,14 @@ li {
   background-position: -311px 0;
 }
 
-#main section#social_wrap {
+#main section.social_wrap {
   width: 1260px;
   height: 630px;
   margin: 0 auto;
   background: #eee;
 }
 
-#main section#social_wrap div.social_tit {
+#main section.social_wrap div.social_tit {
   float: left;
 }
 
