@@ -327,7 +327,7 @@
   </header>
 
   <main id="main">
-    <section id="merit_wrap">
+    <section class="merit_wrap">
       <img src="img/merit_title.svg" alt="">
       <div class="merit">
         <ul class="clearfix">
@@ -382,16 +382,18 @@
     <section class="social_wrap clearfix">
       <div class="social_tit">
         <div class="s_tit_plus">
-          <img src="" alt="">
+          <img src="img/plus_logo.png" alt="">
           <h1>더샵</h1>
-          <h1>플러스친구</h1>
-          <p>고객님들의</p>
-          <p>다양한 의견과</p>
-          <p>새로운 소식들을</p>
-          <p>더샵의 소셜계정에서도</p>
-          <p>만나보세요!</p>
+          <h2>플러스친구</h2>
+          <div class="s_p">
+            <p>고객님들의</p>
+            <p>다양한 의견과</p>
+            <p>새로운 소식들을</p>
+            <p>더샵의 소셜계정에서도</p>
+            <p>만나보세요!</p>
+          </div>
         </div>
-        <div class="s_tit_youtube">
+        <!-- <div class="s_tit_youtube">
           <img src="" alt="">
           <h1>더샵</h1>
           <h1>TV</h1>
@@ -400,9 +402,17 @@
           <p>새로운 소식들을</p>
           <p>더샵의 소셜계정에서도</p>
           <p>만나보세요!</p>
+        </div> -->
+        <div class="s_slider_btn clearfix">
+          <div class="prev_btn">
+            <em><img src="img/prev_btn.png" alt=""></em>
+          </div>
+          <div class="next_btn">
+            <em><img src="img/next_btn.png" alt=""></em>
+          </div>
         </div>
       </div>
-      <div class="social_board_ct">
+      <div class="social_board_ct clearfix">
         <div class="social_board_1">
            <ul>
              <li>
@@ -410,14 +420,18 @@
                  <img src="img/social_img1.jpg" alt="">
                 </a>
               </li>
-              <li>
+              <li class="s_txt_box_bottom">
                 <a href="#">
                   <span>더샵의 새로운 광고모델로 배우 김수현을 선정하였습니다. 이번 광고는 '주거의 기본에 충실해 고객 만족에 최선을 다하겠다'는 포스코 건설의 주거 철학을 담은 슬로건 '주거의 본이 되다'가 광고 문구로 사용됐으며, 김수현씨의 철저한 자기관리와 최선을 다하는 이미지가 더샵과 함께 시너지를 낼 것으로 기대하고 있습니다.</span>
                   <div class="like_re_wrap">
-                    <div class="like_icon"></div>
-                    <p>31</p>
-                    <div class="re_icon"></div>
-                    <p>13</p>
+                    <div class="like">
+                      <div class="like_icon"></div>
+                      <p>31</p>
+                    </div>
+                    <div class="re">
+                      <div class="re_icon"></div>
+                      <p>13</p>
+                    </div>
                   </div>
                 </a>
                </li>
@@ -425,20 +439,23 @@
         </div>
         <div class="social_board_1">
           <ul>
-            <li>
+            <li class="s_txt_box_top">
               <a href="#">
                 <span>1주택자 4%늘 때 다주택자16%늘었다. 통계청에 따르면 2018년 기준, 국내 일반 가구수는 약 1,997만 9천 가구입니다. 같은 시기 주택수는 이보다 많은 2,018만 8천 호죠.</span>
                 <div class="like_re_wrap">
-                  <div class="like_icon"></div>
-                  <p>6</p>
-                  <div class="re_icon"></div>
-                  <p>4</p>
-                </div>
+                  <div class="like">
+                    <div class="like_icon"></div>
+                    <p>6</p>
+                  </div>
+                  <div class="re">
+                    <div class="re_icon"></div>
+                    <p>4</p>
+                  </div>
               </a>
              </li>
             <li>
               <a href="#">
-                <img src="img/social_img3.png" alt="">
+                <img src="img/social_img2.png" alt="">
                </a>
              </li>
           </ul>
@@ -447,17 +464,21 @@
           <ul>
             <li>
               <a href="#">
-                <img src="img/img_l.jpg" alt="">
+                <img src="img/social_img3.png" alt="">
                </a>
              </li>
-             <li>
+             <li class="s_txt_box_bottom">
                <a href="#">
                  <span>"앞으로 해운대에 이런 단지는 다시 나오기 힘듭니다."<br> (해운대 H공인중개사무소 대표)<br>해운대 앞바다 최 중심. 2019년 11월 29일 사용 승인에 따라 12월 드디어 '해운대 엘시티(LCT)'가 본격 입주를 시작했습니다.</span>
                  <div class="like_re_wrap">
-                   <div class="like_icon"></div>
-                   <p>15</p>
-                   <div class="re_icon"></div>
-                   <p>20</p>
+                  <div class="like">
+                    <div class="like_icon"></div>
+                    <p>15</p>
+                  </div>
+                  <div class="re">
+                    <div class="re_icon"></div>
+                    <p>20</p>
+                  </div>
                  </div>
                </a>
               </li>
@@ -465,10 +486,10 @@
        </div>
       </div>
     </section>
-    <section id="item_wrap">
+    <section class="item_wrap">
       <div class="item">
+        <img src="img/item_1.png" alt="">
         <div class="item_txt">
-          <img src="img/item_1.png" alt="">
           <h3>새집나들이</h3>
           <a href="#">자세히보기</a>
         </div>
@@ -480,36 +501,35 @@
   </main>
 
   <footer id="footer">
-    <div class="footer_info">
+    <div class="footer_wrap clearfix">
       <span class="footer_logo">
         <img src="img/footer_logo.png" alt="">
       </span>
-
-      <ul class="footer_etc">
-        <li>
-          <a href="#">개인정보처리방침</a>
-        </li>
-        <li>
-          <a href="#">이용약관</a>
-        </li>
-        <li>
-          <a href="#">이메일주소무단수집거부</a>
-        </li>
-        <li>
-          <a href="#">그룹방문예약</a>
-        </li>
-      </ul>
-
-      <div class="address">
-        <p>(주)포스코건설</p>
-        <p>
-          <span>대표자 : 한성희</span>
-          <span>주소 : 경상북도 포항시 남구 대송로 180</span>
-          <span>사업자등록번호 : 506-81-02280</span>
-        </p>
-        <div class="copyright">© 2020 Posco Engineering Construction Co., LTD. All Rights Reserved</div>
+      <div class="footer">
+        <ul class="footer_etc clearfix">
+          <li>
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            <a href="#">이메일주소무단수집거부</a>
+          </li>
+          <li>
+            <a href="#">그룹방문예약</a>
+          </li>
+        </ul>
+        <div class="address">
+          <p>(주)포스코건설</p>
+          <p class="clearfix">
+            <span>대표자 : 한성희</span>
+            <span>주소 : 경상북도 포항시 남구 대송로 180</span>
+            <span>사업자등록번호 : 506-81-02280</span>
+          </p>
+          <div class="copyright">© 2020 Posco Engineering Construction Co., LTD. All Rights Reserved</div>
+        </div>
       </div>
-
       <select name="footer_link" id="footer_link" class="select" onchange="gotoSite(this.value);">
         <option value="">FAMILY SATE</option>
         <option value="http://www.posco.co.kr">포스코</option>
