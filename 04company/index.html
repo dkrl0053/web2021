@@ -14,22 +14,33 @@
   <script>
     $(document).ready(function(){
       $(".visual_slider").bxSlider({
+        auto: true,
+        speed: 2000,
+        pause: 8000,
         controls:false,
-        pagerCustom:".slider_tap"
-				// auto:true,
+        pagerCustom:".slider_tap",
+        mode: 'fade'
       });
 
-      var newsSlider = $(".news_slider").bxSlider({
+      const newsSlider = $(".left_slider").bxSlider({
+        controls:false,
+        pager:false,
+        mode: 'fade'
+      });
+      const newsSlider2 = $(".right_slider").bxSlider({
         controls:false,
         pager:false,
       });
 
       $(".next_btn").click(function(){
         newsSlider.goToNextSlide();
+        newsSlider2.goToNextSlide();
       });
       $(".prev_btn").click(function(){
         newsSlider.goToPrevSlide();
+        newsSlider2.goToPrevSlide();
       });
+
 
     });
   </script>
@@ -37,90 +48,62 @@
 <body>
   <header id="header">
     <div class="header_wrap">
-      <h1>
-        <a href="#"><img src="img/top_logo.png" alt=""></a>
-      </h1>
-      <nav class="gnb">
-        <ul class="gnb_depth_1 clearfix">
-          <li>
-            <a href="#">브랜드</a>
-            <ul class="gnb_depth_2 clearfix">
-              <li>
-                <a href="#">더샵</a>
-              </li>
-              <li>
-                <a href="#">로고</a>
-              </li>
-              <li>
-                <a href="#">히스토리</a>
-              </li>
-              <li>
-                <a href="#">뉴스</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">상품</a>
-            <ul class="gnb_depth_2">
-              <li>
-                <a href="#"><strong>디자인</strong></a>
-              </li>
-              <li>
-                <a href="#"><strong>기술</strong></a>
-              </li>
-              <li>
-                <a href="#"><strong>서비스</strong></a>
-              </li>
-              <li>
-                <a href="#"><strong>커뮤니티</strong></a>
-              </li>
-              <li>
-                <a href="#"><strong>조경</strong></a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">단지</a>
-            <ul class="gnb_depth_2">
-              <li>
-                <a href="#"><strong>분양단지</strong></a>
-              </li>
-              <li>
-                <a href="#"><strong>공사단지</strong></a>
-              </li>
-              <li>
-                <a href="#"><strong>입주단지</strong></a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">갤러리</a>
-            <ul class="gnb_depth_2">
-              <li>
-                <a href="#"><strong>더샵갤러리</strong></a>
-              </li>
-              <li>
-                <a href="#"><strong>소식</strong></a>
-              </li>
-              <li>
-                <a href="#"><strong>행사·관람</strong></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <div class="header_util">
-        <ul>
-          <li>
-            <a href="#"><p>마이더샵</p></a>
-          </li>
-          <li>
-            <a href="#"><p>고객센터</p></a>
-          </li>
-          <li>
-            <a href="#" class="search"><p class="right">단지검색</p></a>            
-          </li>
-        </ul>
+      <div class="header">
+        <h1>
+          <a href="#"><img src="img/top_logo.png" alt=""></a>
+        </h1>
+        <nav class="gnb">
+          <div class="gnb_depth_1 clearfix">
+            <div>
+              <a href="#">브랜드</a>
+              <ul class="gnb_depth_2">
+                <li><a href="#"><p>더샵</p></a></li>
+                <li><a href="#"><p>로고</p></a></li>
+                <li><a href="#"><p>히스토리</p></a></li>
+                <li><a href="#"><p>뉴스</p></a></li>
+              </ul>
+            </div>
+            <div>
+              <a href="#">상품</a>
+              <ul class="gnb_depth_2">
+                <li><a href="#"><p>디자인</p></a></li>
+                <li><a href="#"><p>기술</p></a></li>
+                <li><a href="#"><p>서비스</p></a></li>
+                <li><a href="#"><p>커뮤니티</p></a></li>
+                <li><a href="#"><p>조경</p></a></li>
+              </ul>
+            </div>
+            <div>
+              <a href="#">단지</a>
+              <ul class="gnb_depth_2">
+                <li><a href="#"><p>분양단지</p></a></li>
+                <li><a href="#"><p>공사단지</p></a></li>
+                <li><a href="#"><p>입주단지</p></a></li>
+              </ul>
+            </div>
+            <div>
+              <a href="#">갤러리</a>
+              <ul class="gnb_depth_2">
+                <li><a href="#"><p>더샵갤러리</p></a></li>
+                <li><a href="#"><p>소식</p></a></li>
+                <li><a href="#"><p>행사·관람</p></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="header_util">
+          <ul>
+            <li>
+              <a href="#"><p>마이더샵</p></a>
+            </li>
+            <li>
+              <a href="#"><p>고객센터</p></a>
+            </li>
+            <li>
+              <a href="#" class="search"><p class="right">단지검색</p></a>            
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -187,7 +170,6 @@
       </div>
     </div>
 
-
     <div id="content">
       <ul class="clearfix">
         <li class="ct_1">
@@ -204,48 +186,57 @@
           </a>
         </li>
         <li class="ct_3">
-          <div class="news_slider_wrap">
-            <ul class="news_slider">
-              <li class="news clearfix">
-                <div class="left">
-                  <div class="news_slider_txt">
-                    <h4>뉴스</h4>
+          <div class="news_slider_wrap">        
+            <div class="right">
+              <ul class="right_slider">
+                <li class="news_slider_img">
+                  <div class="n_img_1"></div>
+                </li>
+                <li class="news_slider_img">
+                  <div class="n_img_2"></div>
+                </li>
+                <li class="news_slider_img">
+                  <div class="n_img_3"></div>
+                </li>
+                <li class="news_slider_img">
+                  <div class="n_img_4"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="left">
+              <h4>뉴스</h4>
+              <ul class="left_slider">
+                <li class="news_slider_txt">
+                  <a href="#">
+                    <p class="n_hover">경기 광주 최초 단지 내 수영장<br>
+                       포스코 건설, 더샵 오프센트리체<br>
+                       2월 분양</p>
+                    <p class="n_date">2021.01.21</p>
+                  </a>
+                </li>
+                <li class="news_slider_txt">
+                  <a href="#">
+                    <p>포스코건설,<br>
+                    아산'더샵 탕정역센트로'분양</p>
+                    <p class="n_date">2021.01.18</p>
+                  </a>
+                </li>
+                <li class="news_slider_txt">
+                  <a href="#">
                     <p>더샵 디오션시티 2차,<br>
                     전북최대 롯데몰 인근 입지</p>
                     <p class="n_date">2020.12.21</p>
-                  </div>
-                </div>
-                <div class="right">
-                  <div class="news_slider_bg"></div>
-                </div>
-              </li>
-              <li class="news clearfix">
-                <div class="left">
-                  <div class="news_slider_txt">
-                    <h4>뉴스</h4>
-                    <p>더샵 디오션시티 2차,<br>
-                    전북최대 롯데몰 인근 입지</p>
-                    <p class="n_date">2020.12.21</p>
-                  </div>
-                </div>
-                <div class="right">
-                  <div class="news_slider_bg"></div>
-                </div>
-              </li>
-              <li class="news clearfix">
-                <div class="left">
-                  <div class="news_slider_txt">
-                    <h4>뉴스</h4>
-                    <p>더샵 디오션시티 2차,<br>
-                    전북최대 롯데몰 인근 입지</p>
-                    <p class="n_date">2020.12.21</p>
-                  </div>
-                </div>
-                <div class="right">
-                  <div class="news_slider_bg"></div>
-                </div>
-              </li>
-            </ul>
+                  </a>
+                </li>
+                <li class="news_slider_txt">
+                  <a href="#">
+                    <p>용인 수지 현대성우 8단지<br>
+                    리모델링 수주</p>
+                    <p class="n_date">2020.12.20</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="n_slider_btn clearfix">
               <div class="prev_btn">
                 <em><img src="img/prev_btn.png" alt=""></em>
@@ -538,10 +529,20 @@
       </select>
     </div>
   </footer>
-   
 
 
+  <script>
+    const header_wrap = document.querySelector('.header_wrap');
+    const gnb_depth_1 = document.querySelector('.gnb_depth_1')
+  
+    gnb_depth_1.addEventListener('mouseover', function(){
+      header_wrap.classList.add('on');
+    })
 
+    header_wrap.addEventListener('mouseout', function(){
+      header_wrap.classList.remove('on');
+    })
+  </script>
 
 </body>
 </html>
