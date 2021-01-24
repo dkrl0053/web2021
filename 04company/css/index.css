@@ -623,8 +623,16 @@ body em img {
   margin-right: 10px;
 }
 
+#header #content li.ct_3 .news_slider_wrap .n_slider_btn .prev_btn:hover em {
+  background: rgba(231, 231, 231, 0.5);
+}
+
 #header #content li.ct_3 .news_slider_wrap .n_slider_btn .next_btn {
   float: right;
+}
+
+#header #content li.ct_3 .news_slider_wrap .n_slider_btn .next_btn:hover em {
+  background: rgba(231, 231, 231, 0.5);
 }
 
 #header #content li.ct_4 {

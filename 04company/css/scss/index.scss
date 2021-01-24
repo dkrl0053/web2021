@@ -300,9 +300,15 @@ body {
           .prev_btn {
             float: left;
             margin-right: 10px;
+            &:hover em {
+              background: rgba(231, 231, 231, 0.5);
+            }
           }
           .next_btn {
             float: right;
+            &:hover em {
+              background: rgba(231, 231, 231, 0.5);
+            }
           }
         }
       }
@@ -713,3 +719,10 @@ body {
     }
   }
 } /*main*/
+
+@media screen and (max-width: 556px) {
+}
+@media screen and (min-width: 557px) and (max-width: 991px) {
+}
+@media screen and (min-width: 992px) {
+}
