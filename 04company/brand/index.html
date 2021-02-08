@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>company brand</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/brand.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script defer src="../js/headerEvent.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $(".visual_slider").bxSlider({
+        auto: true,
+        speed: 2000,
+        pause: 8000,
+        controls:false,
+        pagerCustom:".slider_tap",
+        mode: 'fade'
+      });
+
+      const newsSlider = $(".left_slider").bxSlider({
+        controls:false,
+        pager:false,
+        mode: 'fade'
+      });
+      const newsSlider2 = $(".right_slider").bxSlider({
+        controls:false,
+        pager:false,
+      });
+
+      $(".next_btn").click(function(){
+        newsSlider.goToNextSlide();
+        newsSlider2.goToNextSlide();
+      });
+      $(".prev_btn").click(function(){
+        newsSlider.goToPrevSlide();
+        newsSlider2.goToPrevSlide();
+      });
+
+      $(".toggle_menu").click(function(){
+          const toggle = $(".toggle_menu").attr("class");
+          if(toggle == "toggle_menu"){
+              $(".toggle_menu").addClass("change");
+              $(".header_gnb").stop().animate({left:0},300);
+          }else{
+              $(".toggle_menu").removeClass("change");
+              $(".header_gnb").stop().animate({left:"-100%"},300);
+          }
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <header id="header">
+    <div class="header_wrap">
+      <div class="header">
+        <div class="header_top">
+          <a href="../" class="logo"></a>
+        </div>
+        <div class="header_gnb">
+          <nav class="gnb">
+            <div class="gnb_depth_1 clearfix">
+              <div>
+                <a href="#">브랜드</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>더샵</p></a></li>
+                  <li><a href="#"><p>로고</p></a></li>
+                  <li><a href="#"><p>히스토리</p></a></li>
+                  <li><a href="#"><p>뉴스</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="#">상품</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>디자인</p></a></li>
+                  <li><a href="#"><p>기술</p></a></li>
+                  <li><a href="#"><p>서비스</p></a></li>
+                  <li><a href="#"><p>커뮤니티</p></a></li>
+                  <li><a href="#"><p>조경</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="#">단지</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>분양단지</p></a></li>
+                  <li><a href="#"><p>공사단지</p></a></li>
+                  <li><a href="#"><p>입주단지</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="#">갤러리</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>더샵갤러리</p></a></li>
+                  <li><a href="#"><p>소식</p></a></li>
+                  <li><a href="#"><p>행사·관람</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        
+          <div class="header_util">
+            <ul>
+              <li>
+                <a href="#"><p>마이더샵</p></a>
+              </li>
+              <li>
+                <a href="#"><p>고객센터</p></a>
+              </li>
+              <li>
+                <a href="#" class="search"><p class="right">단지검색</p></a>            
+              </li>
+            </ul>
+          </div>
+        </div>        
+      </div>
+      <!-- <div class="header_s_bg"></div> -->
+    </div>
+    <div class="toggle_menu"><!--change-->
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+
+  <div id="brand_hd_wrap">
+    <div class="brand_hd_bg"></div>
+    <div class="brand_hd_txt">
+      <h1>더샵</h1>
+      <p>집이 가져야 할 본질적 가치와<br>그 안에 담길 라이프 스타일을 더 깊이 고민합니다.</p>
+    </div>
+    <div class="brand_hd_nav">
+      <ul class="clearfix">
+        <li class="active"><a href="../">더샵</a></li>
+        <li><a href="#">로고</a></li>
+        <li><a href="#">히스토리</a></li>
+        <li><a href="#">뉴스</a></li>
+      </ul>
+    </div>
+  </div>
+  <main id="brand_page">
+    <div class="sub_category">
+      <ul>
+        <li>
+          <a href="../index.html"><i class="fas fa-home"></i></a>
+        </li>
+        <li><img src="../img/category.png" alt=""></li>
+        <li>
+          <a href="#">브랜드</a>
+        </li>
+        <li><img src="../img/category.png" alt=""></li>
+        <li>
+          <a href="#">더샵</a>
+        </li>
+      </ul>
+    </div>
+    <section class="theSharp">
+      <h3>더샵</h3>
+      <h6>보이지 않는 것에서부터 앞서가는 것을 선택했습니다.</h6>
+      <div class="bracket_wrap">
+        <div class="bracket"></div>
+        <div class="slogan">
+          <img src="../img/slogan.jpg" alt="">
+        </div>
+      </div>
+      <p>견고함과 튼튼함을 기반으로 주거의 본질에 집중하여<br>
+      고객의 생활에 든든한 안심을 제공하고 프리미엄 주거문화를 선도합니다.</p>
+    </section>
+    <section class="brand_card">
+      <ul class="clearfix">
+        <li>
+          <div class="card_icon"><i class="fas fa-hard-hat"></i></div>
+          <h3>신뢰 할 수 있는 안전</h3>
+          <p>마음놓고 지낼 수 있는<br>안전한 주거 환경을 <br>만들어 내는 신뢰 할 수 있는 안전,<br>세상에서 가장 안전한 보금자리<br>더샵이 추구하는<br>집의 가장 중요한 본질입니다.</p>
+        </li>
+        <li>
+          <div class="card_icon"><i class="fab fa-pagelines"></i></div>
+          <h3>안락한 휴식</h3>
+          <p>안락한 환경에서 마음 편히 쉴 수 있는<br>그래서 활력이 생기는 안락한 휴식 공간,<br>고객을 향한 세심한 배려가 있는<br>더샵의 조경은 삶의 재충전의 공간과<br>더불어 이웃과 교류가 있는<br>소통과 치유의 공간을 제공합니다</p>
+        </li>
+        <li>
+          <div class="card_icon"> <i class="fas fa-cogs"></i></div>
+          <h3>강화된 편의</h3>
+          <p>고품질 시설과 서비스를 제공하여<br>편리하고 편안한 생활을<br>가능케 해주는 강화된 편의,<br>더샵은 변화하는 라이프 트렌드에 맞춰<br>더욱 스마트한 주거 공간을 위해<br>끊임없이 노력합니다.</p>
+        </li>
+        <li>
+          <div class="card_icon"><i class="fas fa-shapes"></i></div>
+          <h3>세련된 디자인</h3>
+          <p>주거의 본질과<br>고객의 니즈에 집중하여<br>프리미엄 라이프 기준을 선도하는<br>앞서가는 인테리어를<br>끊임없이 연구합니다</p>
+        </li>
+      </ul>
+    </section>
+    <section class="brand_content">
+      <div class="b_cont_title">
+        <h3>최고의 기술로 고객의 행복한 미래를 열어드립니다.</h3>
+        <p>견고함과 튼튼함을 기반으로 주거의 본질에 집중하여<br>
+          고객의 생활에 든든한 안심을 제공하고 프리미엄 주거문화를 선도합니다.
+        </p>
+      </div>
+      <div class="b_cont_wrap">
+        <ul class="clearfix">
+          <li class="b_cont1st">
+            <div class="b_cont_img cont1_img""></div>
+            <div class="b_cont_bottom">
+              <h3>신뢰 할 수 있는 안전</h3>
+              <p>마음놓고 지낼 수 있는 안전한 주거 환경을 만들어 내는 신뢰 할 수 있는 안전,
+                세상에서 가장 안전한 보금자리 더샵이 추구하는 집의 가장 중요한 본질입니다.</p>
+            </div>
+          </li>
+          <li class="b_cont2st">
+            <div class="b_cont_top">
+              <h3>안락한 휴식</h3>
+              <p>안락한 환경에서 마음 편히 쉴 수 있는 그래서 활력이 생기는 안락한 휴식 공간,
+                고객을 향한 세심한 배려가 있는 더샵의 조경은 삶의 재충전의 공간과 더불어 이웃과 교류가 있는 소통과 치유의 공간을 제공합니다</p>
+            </div>
+            <div class="b_cont_img cont2_img""></div>
+          </li>
+          <li class="b_cont3st">
+            <div class="b_cont_img cont3_img""></div>
+            <div class="b_cont_bottom">
+              <h3>강화된 편의</h3>
+              <p>고품질 시설과 서비스를 제공하여 편리하고 편안한 생활을 가능케 해주는 강화된 편의,
+                더샵은 변화하는 라이프 트렌드에 맞춰 더욱 스마트한 주거 공간을 위해 끊임없이 노력합니다. </p>
+            </div>
+          </li>
+          <li class="b_cont4st">
+            <div class="b_cont_top">
+              <h3>세련된 디자인</h3>
+              <p>주거의 본질과 고객의 니즈에 집중하여
+                프리미엄 라이프 기준을 선도하는 앞서가는 인테리어를 끊임없이 연구합니다<br></p>
+            </div>
+            <div class="b_cont_img cont4_img"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer_wrap clearfix">
+      <span class="footer_logo">
+        <img src="../img/footer_logo.png" alt="">
+      </span>
+      <div class="footer">
+        <ul class="footer_etc clearfix">
+          <li>
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            <a href="#">이메일주소무단수집거부</a>
+          </li>
+          <li>
+            <a href="#">그룹방문예약</a>
+          </li>
+        </ul>
+        <div class="address">
+          <p>(주)포스코건설</p>
+          <p class="clearfix">
+            <span>대표자 : 한성희</span>
+            <span>주소 : 경상북도 포항시 남구 대송로 180</span>
+            <span>사업자등록번호 : 506-81-02280</span>
+          </p>
+          <div class="copyright">© 2020 Posco Engineering Construction Co., LTD. All Rights Reserved</div>
+        </div>
+      </div>
+      <select name="footer_link" id="footer_link" class="select" onchange="if(this.value) window.open(this.value)">
+        <option value="" disabled="" selected="" hidden="">FAMILY SATE</option>
+        <option value="http://www.posco.co.kr">포스코</option>
+        <option value="">더샵라이프</option>
+        <option value="">더샵라이프 웹진</option>
+      </select>
+    </div>
+  </footer>
+</body>
+</html>
