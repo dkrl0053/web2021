@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    html,body{
+      height: 100%;
+    }
+    div.wrap{
+      background:pink;
+      padding:30px 0
+    }
+    div.container{
+      max-width: 1000px;
+      margin: 0 auto;
+      background:skyblue;
+    }
+
+    div.container h3{
+      text-align: center;
+      margin-bottom:20px;
+    }
+    div.container .proList{
+      display:flex;
+      justify-content:space-between
+    }
+
+    .proList .list{
+      border: 1px solid #000;
+      padding:20px;
+      flex-basis:24%;
+    }
+    .proList .list h4{
+      font-size:1.3em;
+      margin-bottom:20px;
+    }
+    .proList .list p{}
+
+
+  @media screen and (max-width:746px){
+    div.container .proList{
+      flex-direction:column
+    }
+    .proList .list{
+      margin-bottom: 10px;
+    }
+    .proList .list:last-child{
+      margin-bottom:0;
+    }
+  }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="container">
+    <h3>Lorem ipsum dolor.</h3>
+    <div class="proList">
+      <div class="list">
+        <h4>Lorem ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, soluta!</p>
+      </div>
+      <div class="list">
+        <h4>Lorem ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, soluta!</p>
+      </div>
+      <div class="list">
+        <h4>Lorem ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, soluta!</p>
+      </div>
+      <div class="list">
+        <h4>Lorem ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, soluta!</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

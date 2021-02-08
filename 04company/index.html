@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="css/all.css">
   <script src="./js/jquery-3.1.1.min.js"></script>
   <script src="./js/jquery.bxslider.js"></script>
+  <script defer src="js/headerEvent.js"></script>
+
   <script>
     $(document).ready(function(){
       $(".visual_slider").bxSlider({
@@ -41,6 +43,16 @@
         newsSlider2.goToPrevSlide();
       });
 
+      $(".toggle_menu").click(function(){
+          const toggle = $(".toggle_menu").attr("class");
+          if(toggle == "toggle_menu"){
+              $(".toggle_menu").addClass("change");
+              $(".header_gnb").stop().animate({left:0},300);
+          }else{
+              $(".toggle_menu").removeClass("change");
+              $(".header_gnb").stop().animate({left:"-100%"},300);
+          }
+      });
 
     });
   </script>
@@ -49,83 +61,87 @@
   <header id="header">
     <div class="header_wrap">
       <div class="header">
-        <h1>
-          <a href="#"><img src="img/top_logo.png" alt=""></a>
-        </h1>
-        <nav class="gnb">
-          <div class="gnb_depth_1 clearfix">
-            <div>
-              <a href="#">브랜드</a>
-              <ul class="gnb_depth_2">
-                <li><a href="#"><p>더샵</p></a></li>
-                <li><a href="#"><p>로고</p></a></li>
-                <li><a href="#"><p>히스토리</p></a></li>
-                <li><a href="#"><p>뉴스</p></a></li>
-              </ul>
-            </div>
-            <div>
-              <a href="#">상품</a>
-              <ul class="gnb_depth_2">
-                <li><a href="#"><p>디자인</p></a></li>
-                <li><a href="#"><p>기술</p></a></li>
-                <li><a href="#"><p>서비스</p></a></li>
-                <li><a href="#"><p>커뮤니티</p></a></li>
-                <li><a href="#"><p>조경</p></a></li>
-              </ul>
-            </div>
-            <div>
-              <a href="#">단지</a>
-              <ul class="gnb_depth_2">
-                <li><a href="#"><p>분양단지</p></a></li>
-                <li><a href="#"><p>공사단지</p></a></li>
-                <li><a href="#"><p>입주단지</p></a></li>
-              </ul>
-            </div>
-            <div>
-              <a href="#">갤러리</a>
-              <ul class="gnb_depth_2">
-                <li><a href="#"><p>더샵갤러리</p></a></li>
-                <li><a href="#"><p>소식</p></a></li>
-                <li><a href="#"><p>행사·관람</p></a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <div class="header_util">
-          <ul>
-            <li>
-              <a href="#"><p>마이더샵</p></a>
-            </li>
-            <li>
-              <a href="#"><p>고객센터</p></a>
-            </li>
-            <li>
-              <a href="#" class="search"><p class="right">단지검색</p></a>            
-            </li>
-          </ul>
+        <div class="header_top">
+          <a href="#" class="logo"></a>
         </div>
+        <div class="header_gnb">
+          <nav class="gnb">
+            <div class="gnb_depth_1 clearfix">
+              <div>
+                <a href="#">브랜드</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>더샵</p></a></li>
+                  <li><a href="#"><p>로고</p></a></li>
+                  <li><a href="#"><p>히스토리</p></a></li>
+                  <li><a href="#"><p>뉴스</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="#">상품</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>디자인</p></a></li>
+                  <li><a href="#"><p>기술</p></a></li>
+                  <li><a href="#"><p>서비스</p></a></li>
+                  <li><a href="#"><p>커뮤니티</p></a></li>
+                  <li><a href="#"><p>조경</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="#">단지</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>분양단지</p></a></li>
+                  <li><a href="#"><p>공사단지</p></a></li>
+                  <li><a href="#"><p>입주단지</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="#">갤러리</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>더샵갤러리</p></a></li>
+                  <li><a href="#"><p>소식</p></a></li>
+                  <li><a href="#"><p>행사·관람</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        
+          <div class="header_util">
+            <ul>
+              <li>
+                <a href="#"><p>마이더샵</p></a>
+              </li>
+              <li>
+                <a href="#"><p>고객센터</p></a>
+              </li>
+              <li>
+                <a href="#" class="search"><p class="right">단지검색</p></a>            
+              </li>
+            </ul>
+          </div>
+        </div>        
       </div>
+      <!-- <div class="header_s_bg"></div> -->
     </div>
-
-    <div class="toggle_menu">
+    <div class="toggle_menu"><!--change-->
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
     </div>
+    
 
     <div class="visual_slider_wrap">
       <ul class="visual_slider">
          <li>
-           <img src="img/20201228.183630.6283.jpg" alt="">
+           <!-- <img src="img/20201228.183630.6283.jpg" alt=""> -->
            <div class="slider_txt">
-             <p>15,000여 세대 미니신도시로 거듭날 청천·산곡-그 중심에 캐슬 & 더샵이 들어옵니다!</p>
+             <p>15,000여 세대 미니신도시로 거듭날 청천·산곡-그 중심에 <br>캐슬 & 더샵이 들어옵니다!</p>
              <h2>부평 캐슬 & 더샵 퍼스트</h2>
              <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
              <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
            </div>
          </li>
          <li>
-          <img src="img/20201228.183724.0336.jpg" alt="">
+          <!-- <img src="img/20201228.183724.0336.jpg" alt=""> -->
           <div class="slider_txt">
             <p>필리핀 천혜의 자연환경에서 모든 것을 누리다.</p>
             <h2>더샵 클락힐즈</h2>
@@ -134,7 +150,7 @@
           </div>
         </li>
         <li>
-          <img src="img/20201228.232006.8497.jpg" alt="">
+          <!-- <img src="img/20201228.232006.8497.jpg" alt=""> -->
           <div class="slider_txt">
             <p>디오션시티 그리고 더샵 MORE BRILLIANT NEW AGAIN</p>
             <h2>더샵 디오션시티 2차</h2>
@@ -143,7 +159,7 @@
           </div>
         </li>
         <li>
-          <img src="img/20210113.195814.4900.jpg" alt="">
+          <!-- <img src="img/20210113.195814.4900.jpg" alt=""> -->
           <div class="slider_txt">
             <p>반포에 더샵이 찾아옵니다.</p>
             <h2>더샵 반포리버파크</h2>
@@ -152,7 +168,7 @@
           </div>
         </li>
         <li>
-          <img src="img/20201228.183711.1513.jpg" alt="">
+          <!-- <img src="img/20201228.183711.1513.jpg" alt=""> -->
           <div class="slider_txt">
             <p>더샵의 프리미엄 탕정을 품다!</p>
             <h2>더샵 탕정역센트로</h2>
@@ -169,9 +185,43 @@
         <a href="#" data-slide-index="4"></a>
       </div>
     </div>
-
+    
     <div id="content">
-      <ul class="clearfix">
+      <div class="mobile_content">
+        <ul class="clearfix">
+          <li class="mbct_1">
+            <a href="#">
+              <div class="mbct_icon"></div>
+              <p>분양캘린더</p>
+            </a>
+          </li>
+          <li class="mbct_2">
+            <a href="#">
+              <div class="mbct_icon"></div>
+              <p>분양대금조회</p>
+            </a>
+          </li>
+          <li class="mbct_3">
+            <a href="#">
+              <div class="mbct_icon"></div>
+              <p>입주예약</p>
+            </a>
+          </li>
+          <li class="mbct_4">
+            <a href="#">
+              <div class="mbct_icon"></div>
+              <p>고객센터</p>
+            </a>
+          </li>
+          <li class="mbct_5">
+            <a href="#">
+              <div class="mbct_icon"></div>
+              <p>A/S신청</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="w_ct learfix">
         <li class="ct_1">
           <a href="#">
             <div class="ct_icon"></div>
@@ -273,12 +323,12 @@
           <a href="#">
             <div class="ct_txt">
               <h3>기술</h3>
-              <p>개별</p>
-              <p>스마트기술을</p>
-              <p>통합한</p>
+              <p class="br">개별</p>
+              <p class="br">스마트기술을</p>
+              <p class="br">통합한</p>
               <p>더샵만의</p>
-              <p>스마트기술</p>
-              <p>브랜드</p>
+              <p class="br">스마트기술</p>
+              <p class="br">브랜드</p>
             </div>
           </a>
         </li>
@@ -377,11 +427,11 @@
           <h1>더샵</h1>
           <h2>플러스친구</h2>
           <div class="s_p">
-            <p>고객님들의</p>
-            <p>다양한 의견과</p>
-            <p>새로운 소식들을</p>
+            <p class="br">고객님들의</p>
+            <p class="br">다양한 의견과</p>
+            <p class="br">새로운 소식들을</p>
             <p>더샵의 소셜계정에서도</p>
-            <p>만나보세요!</p>
+            <p class="br">만나보세요!</p>
           </div>
         </div>
         <!-- <div class="s_tit_youtube">
@@ -396,10 +446,10 @@
         </div> -->
         <div class="s_slider_btn clearfix">
           <div class="prev_btn">
-            <em><img src="img/prev_btn.png" alt=""></em>
+            <em class="em_scale"><img src="img/prev_btn.png" alt=""></em>
           </div>
           <div class="next_btn">
-            <em><img src="img/next_btn.png" alt=""></em>
+            <em class="em_scale"><img src="img/next_btn.png" alt=""></em>
           </div>
         </div>
       </div>
@@ -521,28 +571,14 @@
           <div class="copyright">© 2020 Posco Engineering Construction Co., LTD. All Rights Reserved</div>
         </div>
       </div>
-      <select name="footer_link" id="footer_link" class="select" onchange="gotoSite(this.value);">
-        <option value="">FAMILY SATE</option>
+      <select name="footer_link" id="footer_link" class="select" onchange="if(this.value) window.open(this.value)">
+        <option value="" disabled="" selected="" hidden="">FAMILY SATE</option>
         <option value="http://www.posco.co.kr">포스코</option>
         <option value="">더샵라이프</option>
         <option value="">더샵라이프 웹진</option>
       </select>
     </div>
   </footer>
-
-
-  <script>
-    const header_wrap = document.querySelector('.header_wrap');
-    const gnb_depth_1 = document.querySelector('.gnb_depth_1')
-  
-    gnb_depth_1.addEventListener('mouseover', function(){
-      header_wrap.classList.add('on');
-    })
-
-    header_wrap.addEventListener('mouseout', function(){
-      header_wrap.classList.remove('on');
-    })
-  </script>
-
+  <!-- <div class="top">top</div> -->
 </body>
 </html>

@@ -76,6 +76,53 @@
       position: absolute;
       top: 50px;
       right: 0;
+      padding: 0 35px 0 9px;
+      height: 45px;
+      border: 1px solid #fff;
+      color: #fff;
+      background: #3f3f41;
     }
   }
+}
+
+@media screen and (max-width: 556px) {
+  #footer {
+    .footer_wrap {
+      width: 550px;
+      height: 300px;
+      background: #3f3f41;
+
+      padding: 50px 0px 0px 30px;
+      .footer_logo {
+        display: none;
+      }
+      .footer {
+        .footer_etc {
+          width: 300px;
+          margin-bottom: 15px;
+
+          li {
+            &:nth-child(3):after {
+              display: none;
+            }
+          }
+        }
+        .address {
+          span {
+            float: none;
+            display: block;
+            &:after {
+              display: none;
+            }
+          }
+        }
+      } /*footer*/
+      .select {
+        top: 226px;
+        left: 28px;
+      }
+    }
+  } /*#footer*/
+}
+@media screen and (min-width: 557px) and (max-width: 991px) {
 }

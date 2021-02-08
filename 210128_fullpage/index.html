@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fullpage</title>
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.fullpage.js"></script>
+  <style>
+    nav#navTop{
+      position: fixed;
+      background: #cdcdcd;
+      width: 100%;
+      padding-left: 10px;
+      z-index:1
+    }
+    nav#navTop li{
+      float: left;
+    }
+    nav#navTop li a{
+      display: block;
+      line-height:50px;
+      text-align: center;
+      padding: 0 10px;
+    }
+    nav#navTop li.active{
+      background-color:#f00;
+    }
+    nav#navTop li.active a{
+      color:white
+      
+
+    .section{
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+    .section.page1{
+      background-image: url(images/bg1.jpg);
+    }
+    .section.page2{
+      background-image: url(images/bg2.jpg);
+    }
+    .section.page3{
+      background-image: url(images/bg3.jpg);
+    }
+    .section.page4{
+      background-image: url(images/bg4.jpg);
+      text-align: center;
+    }
+
+
+    .main{
+      width: 400px;
+      position: absolute;
+      top:50%;
+      transform:translateY(-50%)
+    }
+
+    .main.one,.main.three{
+      left:200px;
+    }
+
+    .main.two{
+      right:200px;
+    }
+
+    .main h3{
+      font-size:3em
+    }
+    .main p{
+      margin-bottom: 20px;
+    }
+    .main a{
+      display: block;
+      text-align: center;
+      width: 150px;
+      border: 1px solid #fff;
+      line-height:40px;
+      border-radius:10px;
+      color:white;
+      transition:0.3s
+    }
+    .main a:hover{
+      background-color: #fff;
+      color:#000
+    }
+
+    #onView2st{
+      right:-400px;
+      transition:0.3s
+    }
+    #onView2st.move{
+      right: 200px;
+    }
+
+    #onView3st{
+      left:-400px;
+      transition:0.3s
+    }
+    #onView3st.move{
+      left: 200px;
+    }
+
+    .scroll{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform:translateX(-50%);
+      animation-name:xScroll;
+      animation-duration:0.8s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+    @keyframes xScroll {
+      from{bottom:20px}
+      to{bottom: 40px;}
+    }
+
+  </style>
+  <script>
+    $(function(){
+      $("#fullpage").fullpage({
+        menu:"#topMenu", //메뉴지정
+        anchors:["m1st","m2st","m3st","m4st"],
+        navigation:true,
+        afterLoad:function(anchorslink,index){
+          console.log(anchorslink+','+index);
+
+
+          if(index == 2){
+            $("#onView2st").addClass("move");
+          }else{
+            $("#onView2st").removeClass("move")
+          }
+
+          if(index == 3){
+            $("#onView3st").addClass("move");
+          }else{
+            $("#onView3st").removeClass("move")
+          }
+
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <nav id="navTop">
+    <ul class="clearfix" id="topMenu">
+      <li data-menuanchor="m1st"><a href="#m1st">menu1</a></li>
+      <li data-menuanchor="m2st"><a href="#m2st">menu2</a></li>
+      <li data-menuanchor="m3st"><a href="#m3st">menu3</a></li>
+      <li data-menuanchor="m4st"><a href="#m4st">menu4</a></li>
+    </ul>
+  </nav>
+  <div id="fullpage">
+    <!-- section 1st -->
+    <div class="section page1" data-anchor="m1st">
+      <div class="main one">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, eligendi.</p>
+        <a href="#">more</a>
+      </div>
+      <div class="scroll">
+        <a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
+      </div>
+    </div>
+
+    <!-- section 2st -->
+    <div class="section page2" data-anchor="m2st">
+      <div class="main two" id="onView2st">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, eligendi.</p>
+        <a href="#">more</a>
+      </div>
+    </div>
+
+    <!-- section 3st -->
+    <div class="section page3" data-anchor="m3st">
+      <div class="main three" id="onView3st">
+        <h3>Lorem ipsum.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, eligendi.</p>
+        <a href="#">more</a>
+      </div>
+    </div>
+
+    <!-- section 4st -->
+    <div class="section page4" data-anchor="m4st">
+      <div class="slide "><h1>Simple Demo</h1></div>
+	    <div class="slide"><h1>Only text</h1></div>
+	    <div class="slide"><h1>And text</h1></div>
+	    <div class="slide"><h1>And more text</h1></div>
+    </div>
+  </div>
+</body>
+</html>

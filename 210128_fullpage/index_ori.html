@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fullpage</title>
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.fullpage.js"></script>
+  <style>
+    nav#navTop{
+      position: fixed;
+      background: #cdcdcd;
+      width: 100%;
+      padding-left: 10px;
+      z-index:1
+    }
+    nav#navTop li{
+      float: left;
+    }
+    nav#navTop li a{
+      display: block;
+      line-height:50px;
+      text-align: center;
+      padding: 0 10px;
+    }
+    nav#navTop li.active{
+      background-color:#f00;
+    }
+    nav#navTop li.active a{
+      color:white
+    }
+
+    .section{
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+    .section.page1{
+      background-image: url(images/bg1.jpg);
+    }
+    .section.page2{
+      background-image: url(images/bg2.jpg);
+    }
+
+    .section.page3{
+      background-image: url(images/bg3.jpg);
+    }
+    .section.page4{
+      background-image: url(images/bg4.jpg);
+    }
+
+  </style>
+  <script>
+    $(function(){
+      $("#fullpage").fullpage({
+        menu:"#topMenu", //메뉴지정
+        anchors:["m1st","m2st","m3st","m4st"],
+        navigation:true
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <nav id="navTop">
+    <ul class="clearfix" id="topMenu">
+      <li data-menuanchor="m1st"><a href="#m1st">menu1</a></li>
+      <li data-menuanchor="m2st"><a href="#m2st">menu2</a></li>
+      <li data-menuanchor="m3st"><a href="#m3st">menu3</a></li>
+      <li data-menuanchor="m4st"><a href="#m4st">menu4</a></li>
+    </ul>
+  </nav>
+  <div id="fullpage">
+    <div class="section page1" data-anchor="m1st"></div>
+    <div class="section page2" data-anchor="m2st"></div>
+    <div class="section page3" data-anchor="m3st"></div>
+    <div class="section page4" data-anchor="m4st"></div>
+  </div>
+</body>
+</html>

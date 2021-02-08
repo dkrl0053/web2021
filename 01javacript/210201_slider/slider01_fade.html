@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>slider</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <style>
+    .wrapper img{
+      display: block;
+      width: 500px;
+    }
+    .wrapper{
+      width: 500px;
+      height: 200px;
+      margin: 50px auto;
+      background:orange;
+      overflow: hidden;
+    }
+    .wrapper ul{
+      width: 500px;
+      height: 200px;
+      position: relative;
+    }
+    .wrapper li{
+      position: absolute;
+      left:0;
+      opacity:0
+    }
+    .wrapper li:nth-child(1){
+      top:0;
+      left:0;
+      opacity:1
+    }
+  </style>
+
+  <script>
+    $(function(){
+
+      var current = 0;
+      var banner = $(".wrapper li");
+      var banCount = banner.length;
+      var viewTop = 0;
+
+      function slider(){
+        banner.eq(current).css("opacity",1);
+
+        current++; //current = current + 1
+        if(current == banCount){current=0}
+
+        move(current)
+        console.log(current);
+      }
+
+      setInterval(slider,3000);
+
+      function move(i){
+        banner.eq(i).css({opacity:0,"z-index":viewTop++}).animate({opacity:1},1000);
+      }
+    })
+  </script>
+</head>
+<body>
+
+
+  <div class="wrapper">
+    <ul>
+      <li><img src="../images/images01.jpg" alt="img01"></li>
+      <li><img src="../images/images02.jpg" alt="img02"></li>
+      <li><img src="../images/images03.jpg" alt="img03"></li>
+      <li><img src="../images/images04.jpg" alt="img04"></li>
+      <li><img src="../images/images05.jpg" alt="img05"></li>
+    </ul>
+  </div>
+</body>
+</html>

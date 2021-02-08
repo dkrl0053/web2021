@@ -1,0 +1,168 @@
+  
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>gallery</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <style>
+    #gallery{
+      width: 824px;
+      margin: 0 auto;
+      background:skyblue;
+    }
+    #gallery img{
+      display: block;
+    }
+    #image{
+      width:760px;
+      margin: 0 auto;
+    }
+    #image p{
+      display: none;
+    }
+
+    #thumbnail{
+      width: 824px;
+      height: 95px;
+    }
+
+    #thumbnail div{
+      float: left;
+    }
+    #thumbnail div.left,
+    #thumbnail div.right{
+      width: 32px;
+      height: 95px;
+      padding-top: 30px;
+      padding-left: 10px;
+      cursor:pointer
+    }
+      
+
+    #thumbnail div.container{
+      width: 760px;
+      height: 95px;
+      background:orange;
+      overflow: hidden;
+    }
+    #thumbnail div.container ul{
+      width:2280px;
+      position: relative;
+      left:0px;
+    }
+    #thumbnail div.container ul li{
+      float: left;
+      width: 120px;
+      height: 95px;
+      margin-left:8px;
+    }
+
+    .ml0{
+      margin-left: 0 !important;
+    }
+  </style>
+  <script>
+    // $(document).ready(function(){});
+    $(function(){
+
+      $("#thumbnail li").click(function(){
+        var num = $(this).index();
+        console.log(num);
+        //$("#image>p").hide();
+        //$("#image>p").eq(num).show();
+        $("#image>p").hide().eq(num).show();
+      });
+
+      //next
+      var current = 0; //현재위치값
+
+      $(".right").click(function(){
+        //current = current + 1;
+        current++;
+        if(current==3){current=2;}
+
+        //var cNum = current * 760 *-1;
+        //$(".container>ul").css("left",cNum);
+
+        imgMove();
+      });
+
+      //prev
+      $(".left").click(function(){
+        //current = current - 1;
+        current--;
+        if(current == -1){current=0;}
+        imgMove();
+      });
+
+      // move func
+      function imgMove(){
+        var cNum = current * 760 * -1;
+        //$(".container>ul").css("left",cNum);
+        $(".container>ul").stop().animate({left:cNum},300);
+      }
+
+    });
+  </script>
+</head>
+<body>
+  <div id="gallery"> <!-- 824px -->
+    <div id="image"> <!-- 760px -->
+      <!-- p*17>img[src="images/$.jpg"][alt="img$"] -->
+      <p style="display: block;"><img src="images/0.jpg" alt="img0"></p>
+      <p><img src="images/1.jpg" alt="img1"></p>
+      <p><img src="images/2.jpg" alt="img2"></p>
+      <p><img src="images/3.jpg" alt="img3"></p>
+      <p><img src="images/4.jpg" alt="img4"></p>
+      <p><img src="images/5.jpg" alt="img5"></p>
+      <p><img src="images/6.jpg" alt="img6"></p>
+      <p><img src="images/7.jpg" alt="img7"></p>
+      <p><img src="images/8.jpg" alt="img8"></p>
+      <p><img src="images/9.jpg" alt="img9"></p>
+      <p><img src="images/10.jpg" alt="img10"></p>
+      <p><img src="images/11.jpg" alt="img11"></p>
+      <p><img src="images/12.jpg" alt="img12"></p>
+      <p><img src="images/13.jpg" alt="img13"></p>
+      <p><img src="images/14.jpg" alt="img14"></p>
+      <p><img src="images/15.jpg" alt="img15"></p>
+      <p><img src="images/16.jpg" alt="img16"></p>
+      <p><img src="images/17.jpg" alt="img17"></p>
+    </div>
+    <div id="thumbnail" class="clearfix">
+      <div class="left"><img src="images/btn_left.gif" alt="prev"></div>
+      <div class="container">
+        <ul class="clearfix">
+          <!-- 0~760 -->
+          <li class="ml0"><img src="images/thumb0.jpg" alt="thumb0">1</li>
+          <li><img src="images/thumb1.jpg" alt="thumb0">2</li>
+          <li><img src="images/thumb2.jpg" alt="thumb0">3</li>
+          <li><img src="images/thumb3.jpg" alt="thumb0">4</li>
+          <li><img src="images/thumb4.jpg" alt="thumb0">5</li>
+          <li><img src="images/thumb5.jpg" alt="thumb0">6</li>
+
+          <!-- 760~1520 -->
+          <li class="ml0"><img src="images/thumb6.jpg" alt="thumb0">7</li>
+          <li><img src="images/thumb7.jpg" alt="thumb0">8</li>
+          <li><img src="images/thumb8.jpg" alt="thumb0">9</li>
+          <li><img src="images/thumb9.jpg" alt="thumb0">10</li>
+          <li><img src="images/thumb10.jpg" alt="thumb0">11</li>
+          <li><img src="images/thumb11.jpg" alt="thumb0">12</li>
+
+          <!-- 1520~2280 -->
+          <li class="ml0"><img src="images/thumb12.jpg" alt="thumb0">13</li>
+          <li><img src="images/thumb13.jpg" alt="thumb0">14</li>
+          <li><img src="images/thumb14.jpg" alt="thumb0">15</li>
+          <li><img src="images/thumb15.jpg" alt="thumb0">16</li>
+          <li><img src="images/thumb16.jpg" alt="thumb0">17</li>
+          <li><img src="images/thumb17.jpg" alt="thumb0">18</li>
+        </ul>
+      </div>
+      <div class="right"><img src="images/btn_right.gif" alt="next"></div>
+    </div>
+  </div>
+</body>
+</html>

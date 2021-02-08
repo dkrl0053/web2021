@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tabmenu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.tabWrap{
+			width: 1000px;
+			margin: 0 auto
+		}
+		.tab li{
+			float: left;
+			width: 200px;
+			text-align: center;
+			line-height:40px;
+			cursor:pointer;
+		}
+		.tab li.active{
+			background:skyblue;
+		}
+		.boxWrap div{
+			border: 1px solid #000;
+			padding:20px;
+			display: none;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			//$(".boxWrap>div").hide();
+			$(".boxWrap>div").eq(0).fadeIn();
+
+			$(".tabWrap>ul>li").click(function(){
+				var num = $(this).index();
+				console.log(num);
+
+				$(".tabWrap>ul>li").removeClass();
+				$(this).addClass("active");
+
+				$(".boxWrap>div").hide();
+				$(".boxWrap>div").eq(num).fadeIn();
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div class="tabWrap">
+		<ul class="tab clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+
+		</ul>
+		<div class="boxWrap">
+			<div>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, accusamus velit sapiente praesentium? Itaque tenetur molestiae quos doloremque tempora, corrupti porro possimus, harum praesentium, rerum consequuntur facilis, enim atque corporis.</div>
+			<div>2. Voluptatibus numquam nesciunt aperiam earum illum? Esse consequatur dolores, dolore ipsum nisi sint earum optio nihil rerum ut, vel vero aperiam quidem ea temporibus corporis eveniet quis, doloribus incidunt enim.</div>
+			<div>3. Magni itaque, aliquam incidunt corporis numquam ipsa nobis, repellendus animi veritatis. Earum sapiente soluta rem numquam deserunt eum consequuntur blanditiis cum, atque magnam suscipit voluptas laboriosam, eaque. Possimus, labore, architecto.</div>
+			<div>4. Voluptatibus accusantium laudantium adipisci veritatis perspiciatis consequuntur quidem repellat, eos quam, cum accusamus sapiente, veniam obcaecati nihil repellendus alias quis. Asperiores, ducimus. Quibusdam facilis ut mollitia error consectetur maiores rem!</div>
+			<div>5. Maxime consequatur dicta optio numquam temporibus rem eum voluptatum hic voluptatibus quibusdam tenetur excepturi quo quis sequi odio, nulla corporis nemo voluptates nobis perferendis, qui mollitia. Veniam incidunt velit nisi!</div>
+		</div>
+	</div>
+</body>
+</html>

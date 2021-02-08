@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.nav {
+  width: 1000px;
+  margin: 0 auto;
+}
+.menu li {
+  float: left;
+  width: 20%;
+  position: relative;
+}
+
+.menu li:hover:before,
+.menu li.active:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: skyblue;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.menu li a {
+  display: block;
+  line-height: 40px;
+  text-align: center;
+}
+
+.bar {
+  width: 200px;
+  height: 5px;
+  background-color: #f00;
+  position: relative;
+}

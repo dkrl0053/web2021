@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>slider</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery.mousewheel.min.js"></script>
+  <style>
+    img{
+      display: block;
+      width: 500px;
+    }
+    .wrapper{width: 500px;
+      height: 240px;
+      margin: 20px auto
+    }
+    .wrapper ul{
+      width: 500px;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    .wrapper li{
+      position: absolute;
+      left:100%
+    }
+    .wrapper li:nth-child(1){
+      left:0
+    }
+
+    .wrapper span{
+      cursor:pointer
+    }
+    .wrapper .pager{
+      padding: 10px 0;
+    }
+    .wrapper .pager span{
+      width: 15px;
+      height: 15px;
+      background: #0f0;
+      border-radius:10px;
+      text-indent:-9999px;
+      display:inline-block;
+    }
+    .wrapper .pager span.active{
+      background: #f00;
+    }
+    .wrapper .pager span:hover{
+      background: gray;
+    }
+
+  </style>
+  <script>
+    $(function(){
+      var current = 0;
+      var banner = $(".slider li");
+      var banCount = banner.length;
+      var i;
+      var overBtn = false;
+      var pager = $(".pager span");
+
+      function slideView(){
+        var currentEl = banner.eq(currnet);
+        var nextEl = banner.eq(i);
+
+        currentEl.css({left:0}).stop().animate({left:"-100%"},1000);
+        nextEl.css({left:"100%"}).stop().animate({left:0},1000,function(){overBtn=false;});
+        current = i;
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="slider">
+      <li><img src="../images/images01.jpg" alt="img1"></li>
+      <li><img src="../images/images02.jpg" alt="img2"></li>
+      <li><img src="../images/images03.jpg" alt="img3"></li>
+      <li><img src="../images/images04.jpg" alt="img4"></li>
+      <li><img src="../images/images05.jpg" alt="img5"></li>
+    </ul>
+    <div class="btn">
+      <span class="prev">이전</span>
+      <span class="next">다음</span>
+    </div>
+    <div class="pager">
+      <span class="active">1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>onload</title>
-    <script>
-        window.onload = function(){};
-        $(document).ready(function(){});
-    </script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>onload</title>
+	<script src="../js/jquery-3.1.1.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			alert("jquery1");
+		});
+		$(document).ready(function(){
+			alert("jquery2");
+		});
+		window.onload = function(){
+			//페이지가 완전 로딩후 실행
+			alert("안녕하세요");
+
+		};
+		window.onload = function(){
+			//페이지가 완전 로딩후 실행
+			alert("안녕하세요!!!");
+			
+		};
+
+		function gogo(){
+			alert("반갑습니다.");
+		}
+
+		
+	</script>
 </head>
-<body>
-    
+<body onload="gogo()">
+	
 </body>
 </html>

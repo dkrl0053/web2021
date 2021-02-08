@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+
+  .visual{
+    background-image: url(../images/pc01.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 600px;
+    display: flex;justify-content:center
+  }
+  .container{
+    width: 1000px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .container .viewTxt{
+    flex-grow:1;
+    _background:pink;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-end;
+    color:white
+  }
+  .container .viewTxt h2{
+    width: 350px;
+  }
+  .container .viewTxt p{
+    width: 350px;
+  }
+
+  .banOption{
+    height: 110px;
+    display: flex;
+  }
+  .banOption .banner{
+    background:orange;
+    padding:20px;
+    flex:1;color:white;
+  }
+  .banner .txt{margin-bottom:10px;}
+
+  @media screen and (max-width:760px){
+    .container .viewTxt{
+      align-items:center;
+      text-align: center;
+      font-size:1.5em
+    }
+
+    .banOption{
+      flex-direction:column;
+      height:auto
+    }
+    .banOption .banner a{
+      display: none;
+    }
+    .banOption .banner{
+      padding:10px;margin-bottom:1px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="visual">
+    <div class="container">
+      <div class="viewTxt">
+        <h2>Lorem ipsum dolor.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quasi.</p>
+      </div>
+      <div class="banOption">
+        <div class="banner">
+          <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, quia.</div>
+          <a href="#">more</a>
+        </div>
+        <div class="banner">
+          <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, quia.</div>
+          <a href="#">more</a>
+        </div>
+        <div class="banner">
+          <div class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, quia.</div>
+          <a href="#">more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

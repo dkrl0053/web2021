@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>scroll_menu</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery.mousewheel.min.js"></script>
+  <style>
+  nav.menu{
+    width:100%;
+    background: #cdcdcd;
+  }
+  nav.menu.fixed{
+    position: fixed;
+    background:skyblue;
+  }
+
+  nav.menu ul{
+    width: 1000px;
+    margin: 0 auto
+  }
+  nav.menu li{
+    float: left;
+    width: 20%;
+  }
+  nav.menu li a{
+    display: block;
+    line-height:40px;
+    text-align: center;
+  }
+  .content{height: 3000px;}
+  </style>
+  <script>
+    $(function(){
+      $(document).mousewheel(function(event,delta){
+        console.log(delta);
+        $(window).scroll(function(){
+          var scrollY = $(window).scrollTop();
+
+          if(scrollY > 200){
+            if(delta>0){
+              $(".menu").addClass("fixed");
+            }else{
+              $(".menu").removeClass("fixed");
+            }
+          }else{
+            $(".menu").removeClass("fixed");
+          }
+
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="menu">
+      <ul class="clearfix">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+      </ul>
+    </nav>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ex tempora illum repudiandae, nisi provident quia neque inventore quae deleniti repellat corporis ullam quam asperiores accusantium eum sapiente dolores sint molestiae, nihil ea assumenda nostrum aliquid fuga culpa. Voluptates molestiae repudiandae, illum repellat ipsam sit sequi, vitae commodi corporis suscipit neque fugit! Autem fuga dolorum unde! Dignissimos beatae, omnis neque ducimus expedita itaque minus veniam nobis amet odio, ad, consequatur quis, autem laudantium! Tenetur ex dignissimos nihil, praesentium magnam temporibus suscipit natus, soluta animi sed, quasi nobis itaque possimus illo est distinctio quae? Ratione saepe amet voluptatum suscipit ipsum. Esse.1
+    </div>
+  </div>
+</body>
+</html>

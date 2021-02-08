@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>car</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <style>
+  #panel{
+    width: 600px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    position: relative;
+  }
+  .bar{
+    width: 500px;
+    height: 20px;
+    background: #f00;
+    position: absolute;
+    left: 50px;
+    top: 190px;
+  }
+  .car{
+    position: absolute;
+    left: 50px;
+    top: 120px;
+  }
+  .rotate{
+    transform:rotateY(180deg)
+  }
+
+  </style>
+  <script>
+    $(function(){
+      var bar = $(".bar"); // 바 dom
+      var car = $(".car"); // 자동차 dom
+      var nStart = bar.position().left; //자동차 출발
+      var nEnd = nStart + bar.width() - car.width();  // 자동차 도착
+      var nCurrent = nStart; // 자동자 현재 위치
+      var nStep = 2;
+      var nTimerId = 0;
+
+      function carMove(){
+        //nCurrent = nCurrent + nStep;
+        nCurrent += nStep;
+
+        // if(nCurrent > nEnd){
+        //  car.css("left",nEnd);
+        //}else{
+        //  car.css("left",nCurrent);
+        //}
+
+
+        if(nCurrent > nEnd){
+          nStep = -2;
+          $(".car").addClass("rotate");
+        }
+
+        if(nCurrent < nStart){
+          nStep = 2;
+          $(".car").removeClass("rotate");
+        }
+
+        //console.log(nCurrent);
+
+        car.css("left",nCurrent)
+      }
+      //setInterval(carMove,30) //1000 - 1
+
+      $(".btn_start").click(function(){
+        if(nTimerId == 0){
+          nTimerId = setInterval(carMove,30);
+        }
+        console.log(nTimerId);
+      });
+
+
+      $(".btn_stop").click(function(){
+        clearInterval(nTimerId);
+        nTimerId = 0;
+      });
+
+
+    });
+  </script>
+</head>
+<body>
+  <div id="panel">
+    <div class="bar"></div>
+    <div class="car"><img src="../images/car.png" alt=""></div>
+  </div>
+  <button class="btn_start">시작</button>
+  <button class="btn_stop">멈춤</button>
+</body>
+</html>
