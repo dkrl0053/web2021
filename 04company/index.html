@@ -43,17 +43,6 @@
         newsSlider2.goToPrevSlide();
       });
 
-      $(".toggle_menu").click(function(){
-          const toggle = $(".toggle_menu").attr("class");
-          if(toggle == "toggle_menu"){
-              $(".toggle_menu").addClass("change");
-              $(".header_gnb").stop().animate({left:0},300);
-          }else{
-              $(".toggle_menu").removeClass("change");
-              $(".header_gnb").stop().animate({left:"-100%"},300);
-          }
-      });
-
     });
   </script>
 </head>
@@ -77,7 +66,7 @@
                 </ul>
               </div>
               <div>
-                <a href="#">상품</a>
+                <a href="goods/">상품</a>
                 <ul class="gnb_depth_2">
                   <li><a href="#"><p>디자인</p></a></li>
                   <li><a href="#"><p>기술</p></a></li>
@@ -87,7 +76,7 @@
                 </ul>
               </div>
               <div>
-                <a href="#">단지</a>
+                <a href="plan/">단지</a>
                 <ul class="gnb_depth_2">
                   <li><a href="#"><p>분양단지</p></a></li>
                   <li><a href="#"><p>공사단지</p></a></li>
@@ -95,7 +84,7 @@
                 </ul>
               </div>
               <div>
-                <a href="#">갤러리</a>
+                <a href="gallery/">갤러리</a>
                 <ul class="gnb_depth_2">
                   <li><a href="#"><p>더샵갤러리</p></a></li>
                   <li><a href="#"><p>소식</p></a></li>
@@ -137,7 +126,7 @@
              <p>15,000여 세대 미니신도시로 거듭날 청천·산곡-그 중심에 <br>캐슬 & 더샵이 들어옵니다!</p>
              <h2>부평 캐슬 & 더샵 퍼스트</h2>
              <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
-             <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+             <span class="page none"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
            </div>
          </li>
          <li>
@@ -146,7 +135,7 @@
             <p>필리핀 천혜의 자연환경에서 모든 것을 누리다.</p>
             <h2>더샵 클락힐즈</h2>
             <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
-            <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+            <span class="page none"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
           </div>
         </li>
         <li>
@@ -155,7 +144,7 @@
             <p>디오션시티 그리고 더샵 MORE BRILLIANT NEW AGAIN</p>
             <h2>더샵 디오션시티 2차</h2>
             <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
-            <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+            <span class="page none"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
           </div>
         </li>
         <li>
@@ -163,8 +152,8 @@
           <div class="slider_txt">
             <p>반포에 더샵이 찾아옵니다.</p>
             <h2>더샵 반포리버파크</h2>
-            <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
-            <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+            <span class="page bar"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
+            <span class="page none"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
           </div>
         </li>
         <li>
@@ -173,7 +162,7 @@
             <p>더샵의 프리미엄 탕정을 품다!</p>
             <h2>더샵 탕정역센트로</h2>
             <span class="page"><a href="#"><i class="fas fa-home"></i> 홈페이지</a></span>
-            <span class="page"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
+            <span class="page none"><a href="#"><i class="far fa-hand-point-up"></i> 관심고객등록</a></span>
           </div>
         </li>
       </ul>
@@ -579,6 +568,6 @@
       </select>
     </div>
   </footer>
-  <!-- <div class="top">top</div> -->
+  <div class="top">top</div>
 </body>
 </html>

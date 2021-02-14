@@ -8,18 +8,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/brand.css">
   <link rel="stylesheet" href="../css/all.css">
-  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery.bxslider.js"></script>
   <script defer src="../js/headerEvent.js"></script>
 
   <script>
     $(document).ready(function(){
-      $(".visual_slider").bxSlider({
+      $(".cont_slider01").bxSlider({
         auto: true,
         speed: 2000,
-        pause: 8000,
+        pause: 6000,
         controls:false,
-        pagerCustom:".slider_tap",
-        mode: 'fade'
+        pager:false,
+        mode: 'vertical'
+      });
+      $(".cont_slider02").bxSlider({
+        auto: true,
+        speed: 2000,
+        pause: 7000,
+        controls:false,
+        pager:false,
+        mode: 'vertical'
+      });
+      $(".cont_slider03").bxSlider({
+        auto: true,
+        speed: 2000,
+        pause: 6000,
+        controls:false,
+        pager:false,
+        mode: 'vertical'
+      });
+      $(".cont_slider04").bxSlider({
+        auto: true,
+        speed: 2000,
+        pause: 7000,
+        controls:false,
+        pager:false,
+        mode: 'vertical'
       });
 
       const newsSlider = $(".left_slider").bxSlider({
@@ -32,14 +57,6 @@
         pager:false,
       });
 
-      $(".next_btn").click(function(){
-        newsSlider.goToNextSlide();
-        newsSlider2.goToNextSlide();
-      });
-      $(".prev_btn").click(function(){
-        newsSlider.goToPrevSlide();
-        newsSlider2.goToPrevSlide();
-      });
 
       $(".toggle_menu").click(function(){
           const toggle = $(".toggle_menu").attr("class");
@@ -51,7 +68,26 @@
               $(".header_gnb").stop().animate({left:"-100%"},300);
           }
       });
+    });
 
+    $(function(){
+      $(".sub_content .brand_page").hide().eq(0).show();
+      $(".brand_hd_nav li").click(function(){
+        var i = $(this).index();
+        $(".sub_content .brand_page").hide().eq(i).fadeIn();
+  
+        if(i == 0){
+          $(".sb_ct").html("더샵");
+        }else if(i == 1){
+          $(".sb_ct").html("로고");
+        }else if(i == 2){
+          $(".sb_ct").html("히스토리");
+        }else if(i == 3){
+          $(".sb_ct").html("뉴스");
+        }
+        return false; //클릭시 위로 이동방지
+  
+      });
     });
   </script>
 </head>
@@ -75,7 +111,7 @@
                 </ul>
               </div>
               <div>
-                <a href="#">상품</a>
+                <a href="../goods/">상품</a>
                 <ul class="gnb_depth_2">
                   <li><a href="#"><p>디자인</p></a></li>
                   <li><a href="#"><p>기술</p></a></li>
@@ -85,7 +121,7 @@
                 </ul>
               </div>
               <div>
-                <a href="#">단지</a>
+                <a href="../plan/">단지</a>
                 <ul class="gnb_depth_2">
                   <li><a href="#"><p>분양단지</p></a></li>
                   <li><a href="#"><p>공사단지</p></a></li>
@@ -93,7 +129,7 @@
                 </ul>
               </div>
               <div>
-                <a href="#">갤러리</a>
+                <a href="../gallery/">갤러리</a>
                 <ul class="gnb_depth_2">
                   <li><a href="#"><p>더샵갤러리</p></a></li>
                   <li><a href="#"><p>소식</p></a></li>
@@ -128,117 +164,183 @@
   </header>
 
   <div id="brand_hd_wrap">
-    <div class="brand_hd_bg"></div>
+    <div class="brand_hd_bg">
+      <!-- <img src="../img/brand_bg.jpg" alt=""> -->
+    </div>
     <div class="brand_hd_txt">
-      <h1>더샵</h1>
-      <p>집이 가져야 할 본질적 가치와<br>그 안에 담길 라이프 스타일을 더 깊이 고민합니다.</p>
+      <!-- <h1>더샵</h1> -->
+      <img src="../img/sub_brand_title.svg" alt="">
+      <p>집이 가져야 할 본질적 가치와<br>그 안에 담길 라이프 스타일을 <span>더 깊이 고민합니다.</span></p>
     </div>
     <div class="brand_hd_nav">
       <ul class="clearfix">
-        <li class="active"><a href="../">더샵</a></li>
+        <li><a href="../">더샵</a></li>
         <li><a href="#">로고</a></li>
         <li><a href="#">히스토리</a></li>
         <li><a href="#">뉴스</a></li>
       </ul>
     </div>
   </div>
-  <main id="brand_page">
-    <div class="sub_category">
-      <ul>
-        <li>
-          <a href="../index.html"><i class="fas fa-home"></i></a>
-        </li>
-        <li><img src="../img/category.png" alt=""></li>
-        <li>
-          <a href="#">브랜드</a>
-        </li>
-        <li><img src="../img/category.png" alt=""></li>
-        <li>
-          <a href="#">더샵</a>
-        </li>
-      </ul>
-    </div>
-    <section class="theSharp">
-      <h3>더샵</h3>
-      <h6>보이지 않는 것에서부터 앞서가는 것을 선택했습니다.</h6>
-      <div class="bracket_wrap">
-        <div class="bracket"></div>
-        <div class="slogan">
-          <img src="../img/slogan.jpg" alt="">
+  <div class="sub_category">
+    <ul>
+      <li>
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </li>
+      <li><img src="../img/category.png" alt=""></li>
+      <li>
+        <a href="#">브랜드</a>
+      </li>
+      <li><img src="../img/category.png" alt=""></li>
+      <li>
+        <a href="#" class="sb_ct">더샵</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sub_content">
+  <!--content01-->
+    <div class="brand_page"> 
+      <section class="theSharp">
+        <h3>더샵</h3>
+        <h6>보이지 않는 것에서부터 <span>앞서가는 것을 선택했습니다.</span></h6>
+        <div class="bracket_wrap">
+          <div class="bracket"></div>
+          <div class="slogan">
+            <img src="../img/slogan.jpg" alt="">
+          </div>
         </div>
-      </div>
-      <p>견고함과 튼튼함을 기반으로 주거의 본질에 집중하여<br>
-      고객의 생활에 든든한 안심을 제공하고 프리미엄 주거문화를 선도합니다.</p>
-    </section>
-    <section class="brand_card">
-      <ul class="clearfix">
-        <li>
-          <div class="card_icon"><i class="fas fa-hard-hat"></i></div>
-          <h3>신뢰 할 수 있는 안전</h3>
-          <p>마음놓고 지낼 수 있는<br>안전한 주거 환경을 <br>만들어 내는 신뢰 할 수 있는 안전,<br>세상에서 가장 안전한 보금자리<br>더샵이 추구하는<br>집의 가장 중요한 본질입니다.</p>
-        </li>
-        <li>
-          <div class="card_icon"><i class="fab fa-pagelines"></i></div>
-          <h3>안락한 휴식</h3>
-          <p>안락한 환경에서 마음 편히 쉴 수 있는<br>그래서 활력이 생기는 안락한 휴식 공간,<br>고객을 향한 세심한 배려가 있는<br>더샵의 조경은 삶의 재충전의 공간과<br>더불어 이웃과 교류가 있는<br>소통과 치유의 공간을 제공합니다</p>
-        </li>
-        <li>
-          <div class="card_icon"> <i class="fas fa-cogs"></i></div>
-          <h3>강화된 편의</h3>
-          <p>고품질 시설과 서비스를 제공하여<br>편리하고 편안한 생활을<br>가능케 해주는 강화된 편의,<br>더샵은 변화하는 라이프 트렌드에 맞춰<br>더욱 스마트한 주거 공간을 위해<br>끊임없이 노력합니다.</p>
-        </li>
-        <li>
-          <div class="card_icon"><i class="fas fa-shapes"></i></div>
-          <h3>세련된 디자인</h3>
-          <p>주거의 본질과<br>고객의 니즈에 집중하여<br>프리미엄 라이프 기준을 선도하는<br>앞서가는 인테리어를<br>끊임없이 연구합니다</p>
-        </li>
-      </ul>
-    </section>
-    <section class="brand_content">
-      <div class="b_cont_title">
-        <h3>최고의 기술로 고객의 행복한 미래를 열어드립니다.</h3>
         <p>견고함과 튼튼함을 기반으로 주거의 본질에 집중하여<br>
-          고객의 생활에 든든한 안심을 제공하고 프리미엄 주거문화를 선도합니다.
-        </p>
-      </div>
-      <div class="b_cont_wrap">
+        고객의 생활에 든든한 안심을 제공하고<span> 프리미엄 주거문화를 선도합니다.</span></p>
+      </section>
+      <section class="brand_card">
         <ul class="clearfix">
-          <li class="b_cont1st">
-            <div class="b_cont_img cont1_img""></div>
-            <div class="b_cont_bottom">
-              <h3>신뢰 할 수 있는 안전</h3>
-              <p>마음놓고 지낼 수 있는 안전한 주거 환경을 만들어 내는 신뢰 할 수 있는 안전,
-                세상에서 가장 안전한 보금자리 더샵이 추구하는 집의 가장 중요한 본질입니다.</p>
-            </div>
+          <li>
+            <div class="card_icon"><i class="fas fa-hard-hat"></i></div>
+            <h3>신뢰 할 수 있는 안전</h3>
+            <p>마음놓고 지낼 수 있는<br>안전한 주거 환경을 <br>만들어 내는 신뢰 할 수 있는 안전,<br>세상에서 가장 안전한 보금자리<br>더샵이 추구하는<br>집의 가장 중요한 본질입니다.</p>
           </li>
-          <li class="b_cont2st">
-            <div class="b_cont_top">
-              <h3>안락한 휴식</h3>
-              <p>안락한 환경에서 마음 편히 쉴 수 있는 그래서 활력이 생기는 안락한 휴식 공간,
-                고객을 향한 세심한 배려가 있는 더샵의 조경은 삶의 재충전의 공간과 더불어 이웃과 교류가 있는 소통과 치유의 공간을 제공합니다</p>
-            </div>
-            <div class="b_cont_img cont2_img""></div>
+          <li>
+            <div class="card_icon"><i class="fab fa-pagelines"></i></div>
+            <h3>안락한 휴식</h3>
+            <p>안락한 환경에서 마음 편히 쉴 수 있는<br>그래서 활력이 생기는 안락한 휴식 공간,<br>고객을 향한 세심한 배려가 있는<br>더샵의 조경은 삶의 재충전의 공간과<br>더불어 이웃과 교류가 있는<br>소통과 치유의 공간을 제공합니다</p>
           </li>
-          <li class="b_cont3st">
-            <div class="b_cont_img cont3_img""></div>
-            <div class="b_cont_bottom">
-              <h3>강화된 편의</h3>
-              <p>고품질 시설과 서비스를 제공하여 편리하고 편안한 생활을 가능케 해주는 강화된 편의,
-                더샵은 변화하는 라이프 트렌드에 맞춰 더욱 스마트한 주거 공간을 위해 끊임없이 노력합니다. </p>
-            </div>
+          <li>
+            <div class="card_icon"> <i class="fas fa-cogs"></i></div>
+            <h3>강화된 편의</h3>
+            <p>고품질 시설과 서비스를 제공하여<br>편리하고 편안한 생활을<br>가능케 해주는 강화된 편의,<br>더샵은 변화하는 라이프 트렌드에 맞춰<br>더욱 스마트한 주거 공간을 위해<br>끊임없이 노력합니다.</p>
           </li>
-          <li class="b_cont4st">
-            <div class="b_cont_top">
-              <h3>세련된 디자인</h3>
-              <p>주거의 본질과 고객의 니즈에 집중하여
-                프리미엄 라이프 기준을 선도하는 앞서가는 인테리어를 끊임없이 연구합니다<br></p>
-            </div>
-            <div class="b_cont_img cont4_img"></div>
+          <li>
+            <div class="card_icon"><i class="fas fa-shapes"></i></div>
+            <h3>세련된 디자인</h3>
+            <p>주거의 본질과<br>고객의 니즈에 집중하여<br>프리미엄 라이프 기준을 선도하는<br>앞서가는 인테리어를<br>끊임없이 연구합니다</p>
           </li>
         </ul>
-      </div>
-    </section>
-  </main>
+      </section>
+      <section class="brand_content">
+        <div class="b_cont_title">
+          <h3>최고의 기술로 <span>고객의 행복한 미래를 열어드립니다.</span></h3>
+          <p>견고함과 튼튼함을 기반으로 주거의 본질에 집중하여<br>
+            고객의 생활에 든든한 안심을 제공하고 <span>프리미엄 주거문화를 선도합니다.</span>
+          </p>
+        </div>
+        <div class="b_cont_wrap clearfix">
+          <div class="cont_slider01_wrap">
+            <ul class="cont_slider01">
+              <li class="b_cont1st">
+                <div class="b_cont_img cont1_img""></div>
+                <div class="b_cont_bottom">
+                  <h3>신뢰 할 수 있는 안전</h3>
+                  <p>마음놓고 지낼 수 있는 안전한 주거 환경을 만들어 내는 신뢰 할 수 있는 안전,
+                    세상에서 가장 안전한 보금자리 더샵이 추구하는 집의 가장 중요한 본질입니다.</p>
+                </div>
+              </li>
+              <li class="b_cont3st">
+                <div class="b_cont_img cont3_img""></div>
+                <div class="b_cont_bottom">
+                  <h3>강화된 편의</h3>
+                  <p>고품질 시설과 서비스를 제공하여 편리하고 편안한 생활을 가능케 해주는 강화된 편의,
+                    더샵은 변화하는 라이프 트렌드에 맞춰 더욱 스마트한 주거 공간을 위해 끊임없이 노력합니다. </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="cont_slider02_wrap">
+            <ul class="cont_slider02 clearfix">
+              <li class="b_cont2st">
+                <div class="b_cont_top">
+                  <h3>안락한 휴식</h3>
+                  <p>안락한 환경에서 마음 편히 쉴 수 있는 그래서 활력이 생기는 안락한 휴식 공간,
+                    고객을 향한 세심한 배려가 있는 더샵의 조경은 삶의 재충전의 공간과 더불어 이웃과 교류가 있는 소통과 치유의 공간을 제공합니다</p>
+                </div>
+                <div class="b_cont_img cont2_img""></div>
+              </li>
+              <li class="b_cont4st">
+                <div class="b_cont_top">
+                  <h3>세련된 디자인</h3>
+                  <p>주거의 본질과 고객의 니즈에 집중하여
+                    프리미엄 라이프 기준을 선도하는 앞서가는 인테리어를 끊임없이 연구합니다<br></p>
+                </div>
+                <div class="b_cont_img cont4_img"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="cont_slider03_wrap">
+            <ul class="cont_slider03 clearfix">
+              <li class="b_cont3st">
+                <div class="b_cont_img cont3_img""></div>
+                <div class="b_cont_bottom">
+                  <h3>강화된 편의</h3>
+                  <p>고품질 시설과 서비스를 제공하여 편리하고 편안한 생활을 가능케 해주는 강화된 편의,
+                    더샵은 변화하는 라이프 트렌드에 맞춰 더욱 스마트한 주거 공간을 위해 끊임없이 노력합니다. </p>
+                </div>
+              </li>
+              <li class="b_cont1st">
+                <div class="b_cont_img cont1_img""></div>
+                <div class="b_cont_bottom">
+                  <h3>신뢰 할 수 있는 안전</h3>
+                  <p>마음놓고 지낼 수 있는 안전한 주거 환경을 만들어 내는 신뢰 할 수 있는 안전,
+                    세상에서 가장 안전한 보금자리 더샵이 추구하는 집의 가장 중요한 본질입니다.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="cont_slider04_wrap">
+            <ul class="cont_slider04 clearfix">
+              <li class="b_cont4st">
+                <div class="b_cont_top">
+                  <h3>세련된 디자인</h3>
+                  <p>주거의 본질과 고객의 니즈에 집중하여
+                    프리미엄 라이프 기준을 선도하는 앞서가는 인테리어를 끊임없이 연구합니다<br></p>
+                </div>
+                <div class="b_cont_img cont4_img"></div>
+              </li>
+              <li class="b_cont2st">
+                <div class="b_cont_top">
+                  <h3>안락한 휴식</h3>
+                  <p>안락한 환경에서 마음 편히 쉴 수 있는 그래서 활력이 생기는 안락한 휴식 공간,
+                    고객을 향한 세심한 배려가 있는 더샵의 조경은 삶의 재충전의 공간과 더불어 이웃과 교류가 있는 소통과 치유의 공간을 제공합니다</p>
+                </div>
+                <div class="b_cont_img cont2_img""></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  <!--content02-->
+    <div class="brand_page">
+      <img src="../img/subpage_logo.png" alt="" class="sub_logoImg">
+    </div>
+    <!--content03-->
+    <div class="brand_page">
+       히스토리
+    </div>
+    <!--content04-->
+    <div class="brand_page">
+      <img src="../img/subpage_news.png" alt="" class="sub_newsImg">
+    </div>
+  </div>
+
 
   <footer id="footer">
     <div class="footer_wrap clearfix">
@@ -278,5 +380,6 @@
       </select>
     </div>
   </footer>
+  <div class="top">top</div>
 </body>
 </html>

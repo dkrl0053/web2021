@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/brand.css">
+  <link rel="stylesheet" href="css/all.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script defer src="js/headerEvent.js"></script>
+
+</head>
+<body>
+  <style>
+    .visualSub{width: 100%;height:300px;background:#ccc;position: relative;overflow: hidden;}
+    .visualSub #sVideo{width: 100%;height: 100%;object-fit:cover;}
+    .visualSub .txt{position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:white;}
+    .visualSub .subMenuTab{width: 1260px;
+      position: absolute;left:50%;transform:translateX(-50%);color:white;bottom:0;
+    }
+    .visualSub .subMenuTab ul{background:pink;}
+    .visualSub .subMenuTab li{float: left;width: 25%;text-align: center;}
+    .visualSub .subMenuTab li a{display: block;line-height:40px;color:white;}
+  
+    /*contents*/
+    .contents{width: 1126px;margin: 0 auto}
+    .contents .subContent div{
+      height: 1000px;background:gray;
+    }
+  </style>
+  <script>
+    $(function(){
+      $(".subContent div").hide().eq(0).show();
+      $(".subMenuTab li").click(function(){
+        var i = $(this).index();
+        $(".subContent div").hide().eq(i).fadeIn();
+  
+        if(i == 0){
+          $(".loc_dep2,.title>h3").html("회사소개");
+        }else if(i == 1){
+          $(".loc_dep2,.title>h3").html("기업정보");
+        }else if(i == 2){
+          $(".loc_dep2,.title>h3").html("사업정보");
+        }else if(i == 3){
+          $(".loc_dep2,.title>h3").html("비젼");
+        }
+        return false; //클릭시 위로 이동방지
+  
+      });
+    });
+  </script>
+  <div class="visualSub">
+    <video id="sVideo" autoplay muted loop>
+      <source src="images/video2_1.webm" type="video/webm">
+    </video>
+    <div class="txt">
+      <h2>새로운 미래 창조</h2>
+       <p>삼성전자의 새로운 미래의 창조와<span class="blind2"><br></span>더 나은 세상을 향한 열정</p>
+    </div>
+    <div class="subMenuTab">
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">기업정보</a></li>
+        <li><a href="#">사업정보</a></li>
+        <li><a href="#">비젼</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="contents">
+    <div class="loc">
+      home > 회사소개 > <span class="loc_dep2">회사소개</span>
+    </div>
+    <div class="title">
+      <h3>회사소개</h3>
+    </div>
+    <div class="subContent">
+  
+      <!-- content1ST -->
+      <div class="menu1st">
+        1content
+      </div>
+      <!-- content2ST -->
+      <div class="menu2st">
+        2content
+      </div>
+      <!-- content3ST -->
+      <div class="menu3st">
+        3content
+      </div>
+      <!-- content4ST -->
+      <div class="menu4st">
+        4content
+      </div>
+    </div>
+  
+  </div>
+  
+</body>
+</html>

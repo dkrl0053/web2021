@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>company plan</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/plan.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery.bxslider.js"></script>
+  <script defer src="../js/headerEvent.js"></script>
+
+  <script>
+
+    $(function(){
+      $(".sub_content .brand_page").hide().eq(0).show();
+      $(".brand_hd_nav li").click(function(){
+        var i = $(this).index();
+        $(".sub_content .brand_page").hide().eq(i).fadeIn();
+  
+        if(i == 0){
+          $(".sb_ct").html("분양단지");
+        }else if(i == 1){
+          $(".sb_ct").html("입주단지");
+        }else if(i == 2){
+          $(".sb_ct").html("공사단지");
+        }
+        
+        return false; //클릭시 위로 이동방지
+  
+      });
+    });
+  </script>
+</head>
+<body>
+  <header id="header">
+    <div class="header_wrap">
+      <div class="header">
+        <div class="header_top">
+          <a href="../" class="logo"></a>
+        </div>
+        <div class="header_gnb">
+          <nav class="gnb">
+            <div class="gnb_depth_1 clearfix">
+              <div>
+                <a href="../brand/">브랜드</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>더샵</p></a></li>
+                  <li><a href="#"><p>로고</p></a></li>
+                  <li><a href="#"><p>히스토리</p></a></li>
+                  <li><a href="#"><p>뉴스</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="../goods/">상품</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>디자인</p></a></li>
+                  <li><a href="#"><p>기술</p></a></li>
+                  <li><a href="#"><p>서비스</p></a></li>
+                  <li><a href="#"><p>커뮤니티</p></a></li>
+                  <li><a href="#"><p>조경</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="#">단지</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>분양단지</p></a></li>
+                  <li><a href="#"><p>공사단지</p></a></li>
+                  <li><a href="#"><p>입주단지</p></a></li>
+                </ul>
+              </div>
+              <div>
+                <a href="../gallery/">갤러리</a>
+                <ul class="gnb_depth_2">
+                  <li><a href="#"><p>더샵갤러리</p></a></li>
+                  <li><a href="#"><p>소식</p></a></li>
+                  <li><a href="#"><p>행사·관람</p></a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        
+          <div class="header_util">
+            <ul>
+              <li>
+                <a href="#"><p>마이더샵</p></a>
+              </li>
+              <li>
+                <a href="#"><p>고객센터</p></a>
+              </li>
+              <li>
+                <a href="#" class="search"><p class="right">단지검색</p></a>            
+              </li>
+            </ul>
+          </div>
+        </div>        
+      </div>
+      <!-- <div class="header_s_bg"></div> -->
+    </div>
+    <div class="toggle_menu"><!--change-->
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+
+  <div id="brand_hd_wrap">
+    <div class="brand_hd_bg">
+    </div>
+    <div class="brand_hd_txt">
+      <!-- <h1>더샵</h1> -->
+      <img src="../img/sub_plan_title.svg" alt="">
+      <p>집이 가져야 할 본질적 가치와<br>그 안에 담길 라이프 스타일을 <span>더 깊이 고민합니다.</span></p>
+    </div>
+    <div class="brand_hd_nav">
+      <ul class="clearfix">
+        <li><a href="../">분양단지</a></li>
+        <li><a href="#">입주단지</a></li>
+        <li><a href="#">공사단지</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub_category">
+    <ul>
+      <li>
+        <a href="../index.html"><i class="fas fa-home"></i></a>
+      </li>
+      <li><img src="../img/category.png" alt=""></li>
+      <li>
+        <a href="#">단지</a>
+      </li>
+      <li><img src="../img/category.png" alt=""></li>
+      <li>
+        <a href="#" class="sb_ct">분양단지</a>
+      </li>
+    </ul>
+  </div>
+    <div class="sub_content">
+        <!--content01-->
+        <div class="brand_page"> 
+          <img src="../img/subpage_plan01_2.jpg" alt="" class="plan01">
+        </div>
+      <!--content02-->
+        <div class="brand_page">
+          <img src="../img/subpage_plan02.jpg" alt="" class="plan02">
+        </div>
+        <!--content03-->
+        <div class="brand_page">
+          <img src="../img/subpage_plan03.jpg" alt="" class="plan03">
+        </div>
+    </div>
+
+
+
+  <footer id="footer">
+    <div class="footer_wrap clearfix">
+      <span class="footer_logo">
+        <img src="../img/footer_logo.png" alt="">
+      </span>
+      <div class="footer">
+        <ul class="footer_etc clearfix">
+          <li>
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            <a href="#">이메일주소무단수집거부</a>
+          </li>
+          <li>
+            <a href="#">그룹방문예약</a>
+          </li>
+        </ul>
+        <div class="address">
+          <p>(주)포스코건설</p>
+          <p class="clearfix">
+            <span>대표자 : 한성희</span>
+            <span>주소 : 경상북도 포항시 남구 대송로 180</span>
+            <span>사업자등록번호 : 506-81-02280</span>
+          </p>
+          <div class="copyright">© 2020 Posco Engineering Construction Co., LTD. All Rights Reserved</div>
+        </div>
+      </div>
+      <select name="footer_link" id="footer_link" class="select" onchange="if(this.value) window.open(this.value)">
+        <option value="" disabled="" selected="" hidden="">FAMILY SATE</option>
+        <option value="http://www.posco.co.kr">포스코</option>
+        <option value="">더샵라이프</option>
+        <option value="">더샵라이프 웹진</option>
+      </select>
+    </div>
+  </footer>
+  <div class="top">top</div>
+</body>
+</html>
