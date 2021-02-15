@@ -58,16 +58,34 @@
       });
 
 
-      $(".toggle_menu").click(function(){
-          const toggle = $(".toggle_menu").attr("class");
-          if(toggle == "toggle_menu"){
-              $(".toggle_menu").addClass("change");
-              $(".header_gnb").stop().animate({left:0},300);
-          }else{
-              $(".toggle_menu").removeClass("change");
-              $(".header_gnb").stop().animate({left:"-100%"},300);
-          }
+      $(".slider_year").bxSlider({
+        auto: true,
+        speed: 2000,
+        pause: 7000,
+        controls:false,
+        pager:false,
+        mode: 'fade'
       });
+      $(".slider_list").bxSlider({
+        auto: true,
+        speed: 2000,
+        pause: 7000,
+        controls:false,
+        pager:false,
+        mode: 'vertical'
+      });
+
+
+      // $(".toggle_menu").click(function(){
+      //     const toggle = $(".toggle_menu").attr("class");
+      //     if(toggle == "toggle_menu"){
+      //         $(".toggle_menu").addClass("change");
+      //         $(".header_gnb").stop().animate({left:0},300);
+      //     }else{
+      //         $(".toggle_menu").removeClass("change");
+      //         $(".header_gnb").stop().animate({left:"-100%"},300);
+      //     }
+      // });
     });
 
     $(function(){
@@ -332,8 +350,126 @@
       <img src="../img/subpage_logo.png" alt="" class="sub_logoImg">
     </div>
     <!--content03-->
-    <div class="brand_page">
-       히스토리
+    <div class="brand_page por">
+       <section class="history">
+         <div class="his_title">
+           <h1>더샵의<br>발자취를<br>확인해보세요</h1>
+         </div>
+
+         <div class="history_slider_wrap clearfix">
+           <div class="his_slider_year">
+             <ul class="slider_year">
+               <li><h2>2010</h2></li>
+               <li><h2>2012</h2></li>
+               <li><h2>2013</h2></li>
+               <li><h2>2015</h2></li>
+               <li><h2>2016</h2></li>
+               <li><h2>2017</h2></li>
+               <li><h2>2019</h2></li>
+               <li><h2>2020</h2></li>
+             </ul>
+           </div>
+           <div class="his_slider_img">
+             <ul class="slider_list">
+               <!--2010-->
+              <li>
+                <div class="his_txt">
+                 <p>
+                   <strong>· “더샵” 브랜드 리뉴얼</strong><br>
+                   - 핵심컨셉, 로고, 네이밍 체계 개편
+                 </p>
+               </div>
+                 <img src="../img/history_banner_2010.jpg" alt="">
+              </li> 
+              <!--2012-->
+               <li>
+                 <div class="his_txt">
+                  <p>
+                    <strong>· 서비스브랜드 “온마음서비스” 런칭</strong>
+                  </p>
+                  <p>
+                    <strong>· 오피스텔브랜드 “더샵라르고” 런칭</strong>
+                  </p>
+                  <p>
+                    <strong>· IF Design Award 수상</strong><br>
+                    - 월패드, 도어폰, 원패스카드
+                  </p>
+                </div>
+                  <img src="../img/history_banner_2012.jpg" alt="">
+               </li>
+               <!--2013-->
+               <li>
+                <div class="his_txt">
+                 <p>
+                   <strong>· Reddot Design Award  수상</strong><br>
+                   - 월패드, 도어폰, 원패스카드, 온도조절기스위치
+                 </p>
+               </div>
+                 <img src="../img/history_banner_2013.jpg" alt="">
+              </li>
+              <!--2015-->
+              <li>
+                <div class="his_txt">
+                 <p>
+                   <strong>· 더샵 디자인 철학 및 아이덴티티 “Pure Prestige” 개발</strong>
+                 </p>
+               </div>
+                 <img src="../img/history_banner_2015.jpg" alt="">
+              </li>
+              <!--2016-->
+              <li>
+                <div class="his_txt">
+                 <p>
+                   <strong>· 부동산114 조사 “브랜드충성도 1위” 브랜드 선정</strong>
+                 </p>
+               </div>
+                 <img src="../img/history_banner_2015.jpg" alt="">
+              </li>
+              <!--2017-->
+               <li>
+                <div class="his_txt">
+                 <p>
+                   <strong>· 더샵 해외진출 1호 필리핀 “더샵 클락힐즈” 분양</strong>
+                 </p>
+                 <p>
+                   <strong>· 한국디자인진흥원 선정 굿디자인(Good Design) 건설사 최다 선정</strong><br>
+                   - 국가기술표준원장상, 한국디자인진흥원장상 수상
+                 </p>
+                 <p>
+                   <strong>· K-Design Award Winner 수상</strong><br>
+                   - 스마트통합월패드, 스마트통합스위치, 스마트도어락
+                 </p>
+               </div>
+                 <img src="../img/history_banner_2017.jpg" alt="">
+              </li>
+              <!--2019-->
+              <li>
+                <div class="his_txt">
+                 <p>
+                   <strong>· 더샵 스마트기술브랜드 “아이큐텍(AiQ Tech)” 런칭</strong>
+                 </p>
+               </div>
+                 <img src="../img/history_banner_2019.jpg" alt="">
+              </li>
+              <!--2020-->
+              <li>
+                <div class="his_txt">
+                 <p>
+                   <strong>· 한국표준협회 “품질만족지수(KS-QEI)” 11년 연속 1위</strong>
+                 </p>
+                 <p>
+                   <strong>· 미국브랜드키/한국소비자포럼 공동 “브랜드고객충성도” 4년 연속 1위</strong>
+                 </p>
+                 <p>
+                   <strong>· 2020 한국산업의 브랜드추천 아파트부문 1위 3년 연속 1위</strong>
+                 </p>
+               </div>
+                 <img src="../img/history_banner_2020.jpg" alt="">
+              </li>
+             </ul>
+           </div>
+         </div>
+       </section>
     </div>
     <!--content04-->
     <div class="brand_page">
