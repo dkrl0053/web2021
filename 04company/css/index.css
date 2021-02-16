@@ -1675,24 +1675,25 @@ body em img {
     padding: 90px 0px 0px 0px;
   }
   #main section.merit_wrap img {
+    width: 80%;
     margin: 0 auto;
     padding-bottom: 80px;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
   #main section.merit_wrap .merit {
-    width: 420px;
+    width: 100%;
     margin: 0 auto;
   }
   #main section.merit_wrap .merit ul {
-    width: 440px;
+    width: 100%;
     margin: 0px auto;
   }
   #main section.merit_wrap .merit ul li {
-    width: 210px;
-    height: 290px;
+    width: 50%;
+    height: auto;
     padding: 40px 0;
-    margin-right: 20px;
+    margin-right: 0;
     margin-bottom: 20px;
     border-radius: 20px 0px 20px 0px;
     -webkit-transition: 0.3s;

@@ -1078,21 +1078,22 @@ body {
       height: 900px;
       padding: 90px 0px 0px 0px;
       img {
+        width: 80%;
         margin: 0 auto;
         padding-bottom: 80px;
         transform: scale(1);
       }
       .merit {
-        width: 420px;
+        width: 100%;
         margin: 0 auto;
         ul {
-          width: 440px;
+          width: 100%;
           margin: 0px auto;
           li {
-            width: 210px;
-            height: 290px;
+            width: 50%;
+            height: auto;
             padding: 40px 0;
-            margin-right: 20px;
+            margin-right: 0;
             margin-bottom: 20px;
             border-radius: 20px 0px 20px 0px;
             transition: 0.3s;
